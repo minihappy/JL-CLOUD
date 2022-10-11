@@ -1,0 +1,116 @@
+server:
+  port: 9201
+spring:
+  profiles:
+    active: dev
+  application:
+    name: Gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    gateway:
+      routes: #配置路由路径
+        - id: oauth2-api-route
+          uri: lb://micro-oauth2-api
+          predicates:
+            - Path=/api/**
+          filters:
+            - StripPrefix=1
+        - id: api
+          uri: lb://System
+          predicates:
+            - Path=/ggggapi/**
+          filters:
+            - StripPrefix=1
+        - id: auth
+          uri: lb://Authorization
+          predicates:
+            - Path=/oauth/**,/login/**
+          filters:
+            - StripPrefix=1
+      discovery:
+        locator:
+          enabled: true #开启从注册中心动态创建路由的功能
+          lower-case-service-id: true #使用小写服务名，默认是大写
+#  security:
+#    oauth2:
+#      client:
+#        registration:
+#          api-client-oidc:
+#            provider: Authorization
+#            client-id: client-app
+#            client-secret: 123456
+#            authorization-grant-type: authorization_code
+#            redirect-uri: '{baseUrl}/{action}/oauth2/code/{registrationId}'
+#            scope: ADMIN,TEST
+#            client-name: api-client-oidc
+#          api-client-authorization-code:
+#            provider: Authorization
+#            client-id: client-app
+#            client-secret: 123456
+#            authorization-grant-type: authorization_code
+#            redirect-uri: "{baseUrl}/{action}/authorized"
+#            scope: ADMIN,TEST
+#            client-name: api-client-authorization-code
+#        provider:
+#          # 服务提供地址
+#          Authorization:
+#            issuer-uri: http://auth-server:9000
+#        registration:
+#          # 客户端：与注册时保持一致
+##          myClient:
+##            client-id: client-app
+##            client-secret: 123456
+##            #client-name: my_client_name
+##            scope: read,write
+##            authorization-grant-type: authorization_code
+##            provider: Authorization
+##            redirect-uri: '{baseUrl}/{action}/oauth2/code/{registrationId}'
+##            # 认证方法
+##            client-authentication-method: client_secret_basic
+#          client-app:
+#            provider: Authorization
+#            client-id: client-app
+#            client-secret: 123456
+#            authorization-grant-type: authorization_code
+#            redirect-uri: '{baseUrl}/{action}/oauth2/code/{registrationId}'
+#            scope: read,write,openid
+#            client-name: client-app
+#        provider:
+#          # 服务提供地址
+#          Authorization:
+#            issuer-uri: http://auth-server:9000
+#            # issuer-uri 可以简化下面的配置
+#            # 请求授权码地址
+##            authorization-uri: http://auth-server:9000/oauth2/authorize
+##            # 请求令牌地址
+##            token-uri: http://auth-server:9000/oauth2/token
+##            # 用户资源地址
+##            user-info-uri: http://auth-server:9000/oauth2/user
+##            # 用户资源返回中的一个属性名
+##            user-name-attribute: name
+##            user-info-authentication-method: GET
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: 'http://localhost:9000/rsa/publicKey' #配置RSA的公钥访问地址
+  redis:
+    database: 0
+    port: 6379
+    host: localhost
+    password:
+secure:
+  ignore:
+    urls: #配置白名单路径
+      - "/actuator/**"
+      - "/auth/oauth/token"
+      - "/oauth2/token"
+      - "/login"
+      - "/oauth2/**"
+      - "/user/login"
+      - "/user/logout"
+      - "/captcha"
+      - "/favicon.ico"
+      - "/api/**"

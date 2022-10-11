@@ -1,0 +1,32 @@
+server:
+  port: 9000
+spring:
+  redis:
+    database: 0
+    port: 6379
+    host: localhost
+    password:
+  application:
+    name: Authorization
+  datasource:
+    initialization-mode=always:
+    url: jdbc:mysql://localhost:3306/user_registration?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+#  security:
+#    user:
+#      password: 654321
+#      name: admin
+
+#  cloud:
+#    nacos:
+#      server-addr: 127.0.0.1:7777
+#      discovery:
+#        username: nacos
+#        password: nacos
+#        namespace: public

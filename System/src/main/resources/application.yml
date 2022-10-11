@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: System
+  datasource:
+    initialization-mode=always:
+    url: jdbc:mysql://localhost:3306/mytestdb?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+#logging:
+#  level:
+#    org.hibernate.SQL: debug
+#    org.hibernate.type.descriptor.sql.BasicBinder: trace
+#oauth2-server-url: http://localhost:9401
+server:
+  port: 8088
+#security:
+#  oauth2:
+#    client:
+#      client-id: admin
+#      client-secret: 123456
+#      user-authorization-uri: ${oauth2-server-url}/oauth/authorize
+#      access-token-uri: ${oauth2-server-url}/oauth/token
+#    resource:
+#      jwt:
+#        key-uri: ${oauth2-server-url}/oauth/token_key

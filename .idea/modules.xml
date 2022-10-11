@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Authorization/Authorization.iml" filepath="$PROJECT_DIR$/Authorization/Authorization.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Common/Common.iml" filepath="$PROJECT_DIR$/Common/Common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Gateway/Gateway.iml" filepath="$PROJECT_DIR$/Gateway/Gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JL-Cloud.iml" filepath="$PROJECT_DIR$/JL-Cloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Register/Register.iml" filepath="$PROJECT_DIR$/Register/Register.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sign-up/Sign-up.iml" filepath="$PROJECT_DIR$/Sign-up/Sign-up.iml" />
+      <module fileurl="file://$PROJECT_DIR$/System/System.iml" filepath="$PROJECT_DIR$/System/System.iml" />
+    </modules>
+  </component>
+</project>
