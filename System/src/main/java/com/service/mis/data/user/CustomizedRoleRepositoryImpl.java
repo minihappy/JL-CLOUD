@@ -55,6 +55,6 @@ public class CustomizedRoleRepositoryImpl implements CustomizedRoleRepository {
             sqlArray[i + 1] = roleAuthority;
         }
         int[] ints = batchUpdate(sqlArray);
-        return ints.length/2;
+        return ints.length / 2;
     }
 }

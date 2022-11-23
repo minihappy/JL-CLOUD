@@ -26,10 +26,10 @@ public class Role implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-//    @NotBlank(message = "角色名称不能为空")
+    //    @NotBlank(message = "角色名称不能为空")
     private String name;
 
-//    @NotBlank(message = "角色编码不能为空")
+    //    @NotBlank(message = "角色编码不能为空")
     private String code;
 
     /**
@@ -38,11 +38,11 @@ public class Role implements Serializable {
     private String remark;
     //懒加载 不会查询role表
     @JsonIgnore
-    @ManyToMany(mappedBy = "role",fetch = FetchType.LAZY)
+    @ManyToMany(mappedBy = "role", fetch = FetchType.LAZY)
     private List<User> user;
     //急加载 会查询role表
 //    @JsonIgnore
-    @ManyToMany(mappedBy = "role",fetch = FetchType.EAGER)
+    @ManyToMany(mappedBy = "role", fetch = FetchType.EAGER)
     private List<Authority> authority;
     private String createBy;
     private String changeBy;

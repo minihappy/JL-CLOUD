@@ -15,7 +15,7 @@ import java.security.Principal;
 import java.util.HashMap;
 import java.util.Map;
 
-@RestController//自定义登录接口
+//@RestController//自定义登录接口
 public class login {
     private LoginService loginService;
 

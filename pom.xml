@@ -3,17 +3,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.springcloudalibaba</groupId>
-    <artifactId>register</artifactId>
+    <artifactId>JL-cloud</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <modules>
-        <module>Sign-up</module>
-        <module>Register</module>
-        <module>System</module>
-        <module>Authorization</module>
-        <module>Common</module>
-        <module>Gateway</module>
+        <module>Register</module><!--报名-->
+        <module>Authorization</module><!--授权-->
+        <module>Common</module><!--通用-->
+        <module>Gateway</module><!--网关-->
+        <module>Sys-Source</module><!--后台-->
     </modules>
-    <name>register</name>
+    <name>JL-cloud</name>
     <packaging>pom</packaging>
     <description>Demo project for Spring Boot</description>
     <properties>
@@ -23,6 +22,8 @@
         <spring.version>2.7.0</spring.version>
         <spring.cloud.version>2021.0.1</spring.cloud.version>
         <spring.cloud.alibaba.version>2021.0.1.0</spring.cloud.alibaba.version>
+<!--        <mybatis.plus.starter.version>3.5.1</mybatis.plus.starter.version>-->
+<!--        <mybatis.plus.generator.version>3.5.2</mybatis.plus.generator.version>-->
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -49,6 +50,20 @@
                 <type>pom</type>
                 <scope>import</scope><!-->scope主要是为了管理依赖的部署，确定依赖的使用范围。使用scope标签，可以很方便、直观的进行依赖的总体管理。<-->
             </dependency>
+<!--            <dependency>-->
+<!--                <groupId>com.baomidou</groupId>-->
+<!--                <artifactId>mybatis-plus-boot-starter</artifactId>-->
+<!--                <version>${mybatis.plus.starter.version}</version>-->
+<!--                <type>pom</type>-->
+<!--                <scope>import</scope>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.baomidou</groupId>-->
+<!--                <artifactId>mybatis-plus-generator</artifactId>-->
+<!--                <version>${mybatis.plus.generator.version.version}</version>-->
+<!--                <type>pom</type>-->
+<!--                <scope>import</scope>-->
+<!--            </dependency>-->
         </dependencies>
     </dependencyManagement>
 
@@ -69,27 +84,27 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
-<!--            <version>2.6.3</version>-->
+            <!--            <version>2.6.3</version>-->
         </dependency>
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt</artifactId>
             <version>0.9.1</version>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-oauth2</artifactId>-->
-<!--            <version>2.2.5.RELEASE</version>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-security</artifactId>-->
-<!--            <version>2.2.5.RELEASE</version>-->
-<!--        </dependency>-->
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-core</artifactId>
-        </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.cloud</groupId>-->
+        <!--            <artifactId>spring-cloud-starter-oauth2</artifactId>-->
+        <!--            <version>2.2.5.RELEASE</version>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.cloud</groupId>-->
+        <!--            <artifactId>spring-cloud-starter-security</artifactId>-->
+        <!--            <version>2.2.5.RELEASE</version>-->
+        <!--        </dependency>-->
+                <dependency>
+                    <groupId>org.springframework.security</groupId>
+                    <artifactId>spring-security-core</artifactId>
+                </dependency>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>

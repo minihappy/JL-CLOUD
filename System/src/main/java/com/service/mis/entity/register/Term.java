@@ -17,7 +17,7 @@ public class Term {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private final String name;
-    @OneToMany(targetEntity = Class.class, cascade = CascadeType.REFRESH,fetch = FetchType.EAGER)
+    @OneToMany(targetEntity = Class.class, cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
     @JoinColumn(name = "term_id")
     private List<Class> classes;
     private Date starTime;

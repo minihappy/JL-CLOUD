@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class index {
     @GetMapping("/index")
     @PreAuthorize("hasAuthority('ADMIN')")//限制权限必须是ADMIN才能够访问
-    public String s(){
+    public String s() {
         return "hello";
     }
 }

@@ -7,25 +7,30 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="System" />
+        <module name="register" />
+        <module name="gateway" />
+        <module name="common" />
         <module name="Common" />
-        <module name="Sign-up" />
         <module name="Gateway" />
         <module name="Oauth-authorization-server" />
         <module name="Authorization" />
-        <module name="Register" />
+        <module name="Sys-Source" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Authorization" target="1.8" />
       <module name="AuthorizationClient" target="1.8" />
       <module name="Common" target="1.8" />
+      <module name="common" target="1.8" />
       <module name="Gateway" target="1.8" />
+      <module name="gateway" target="1.8" />
+      <module name="JL-cloud" target="1.8" />
       <module name="JL-Cloud" target="1.8" />
       <module name="micro-oauth2-gateway" target="1.8" />
       <module name="Oauth-authorization-server" target="8" />
       <module name="Oauth-resource-server" target="8" />
       <module name="Register" target="1.8" />
+      <module name="register" target="1.8" />
       <module name="register (1) (com.nacos)" target="1.8" />
       <module name="registernacos" target="1.5" />
       <module name="registerServiceNacos" target="1.5" />
@@ -34,6 +39,7 @@
       <module name="signup" target="1.5" />
       <module name="signupnacos" target="1.5" />
       <module name="spring-security-client" target="8" />
+      <module name="Sys-Source" target="1.8" />
       <module name="System" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -51,6 +57,7 @@
       <module name="RegisterServiceNaCos (1)" options="-parameters" />
       <module name="Sign-up" options="" />
       <module name="System" options="" />
+      <module name="cloud" options="-parameters" />
       <module name="micro-oauth2-gateway" options="" />
       <module name="register (1) (com.nacos)" options="-parameters" />
       <module name="registerServiceNacos" options="" />

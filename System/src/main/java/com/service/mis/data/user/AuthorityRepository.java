@@ -8,6 +8,7 @@ import java.util.List;
 
 public interface AuthorityRepository extends PagingAndSortingRepository<Authority, Long>, CustomizedAuthorityRepository {
     Authority findAuthorityById(Long id);
+
     //
 //@Query("select count(e) from #{#entityName} e where e.id=?1 ")
     long countAuthorityByParentId(Long id);

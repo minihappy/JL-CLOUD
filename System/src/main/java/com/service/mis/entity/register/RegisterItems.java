@@ -16,7 +16,7 @@ public class RegisterItems {
     @Id
     private int id;
     private final String itemName;
-    @OneToMany(targetEntity = RegisterFields.class, cascade = CascadeType.REFRESH,fetch = FetchType.EAGER)
+    @OneToMany(targetEntity = RegisterFields.class, cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
     @JoinColumn(name = "item_id")
     private List<RegisterFields> fields = new ArrayList<>();
 }

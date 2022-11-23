@@ -16,7 +16,7 @@ public class RegisterEnumKey {
     @Id
     private int id;
     private final String name;
-    @OneToMany(targetEntity = RegisterEnumValue.class, cascade = CascadeType.REFRESH,fetch = FetchType.EAGER)
+    @OneToMany(targetEntity = RegisterEnumValue.class, cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
     @JoinColumn(name = "key_id")
     private List<RegisterEnumValue> RegisterEnumValue = new ArrayList<>();
 }

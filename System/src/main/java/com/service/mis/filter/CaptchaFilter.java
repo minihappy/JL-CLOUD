@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@Component
+//@Component
 public class CaptchaFilter extends OncePerRequestFilter {
 
     @Autowired
@@ -40,7 +40,7 @@ public class CaptchaFilter extends OncePerRequestFilter {
             try {
                 validate(request);
             } catch (CaptchaException c) {
-                authenticationEntryPoint.setMsg("验证码错误");
+                authenticationEntryPoint.setMessage("验证码错误");
                 throw c;
 //                throw new RuntimeException("验证码错误异常");
             }

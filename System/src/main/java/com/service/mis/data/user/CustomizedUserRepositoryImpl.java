@@ -18,7 +18,7 @@ public class CustomizedUserRepositoryImpl implements CustomizedUserRepository {
         int count = 0;
         for (Long role_id : role_ids) {
             int update = jdbcTemplate.update("insert into user_role (user_id,role_id) values (" + user_id + "," + role_id + ")");
-            count = update > 0 ? count+1 : count;
+            count = update > 0 ? count + 1 : count;
         }
         return count;
     }

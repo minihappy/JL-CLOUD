@@ -11,16 +11,13 @@ import com.service.auth.service.CustomAuthenticationProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configuration.OAuth2AuthorizationServerConfiguration;
-import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
-import org.springframework.security.config.web.server.ServerHttpSecurity;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.core.AuthorizationGrantType;
 import org.springframework.security.oauth2.core.ClientAuthenticationMethod;
@@ -30,8 +27,9 @@ import org.springframework.security.oauth2.server.authorization.client.Registere
 import org.springframework.security.oauth2.server.authorization.client.RegisteredClientRepository;
 import org.springframework.security.oauth2.server.authorization.config.ClientSettings;
 import org.springframework.security.oauth2.server.authorization.config.ProviderSettings;
+import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.security.web.server.SecurityWebFilterChain;
+import org.springframework.security.web.access.AccessDeniedHandler;
 
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
@@ -39,9 +37,10 @@ import java.security.interfaces.RSAPrivateKey;
 import java.security.interfaces.RSAPublicKey;
 import java.util.UUID;
 
-//@EnableWebFluxSecurity
-@EnableWebSecurity
-@Configuration(proxyBeanMethods = false)
+
+//@EnableWebSecurity
+////@Import({AuthenticationConfiguration.class})
+//@Configuration(proxyBeanMethods = false)
 public class DefaultSecurityConfig {
     /**
      * 授权配置
@@ -56,50 +55,53 @@ public class DefaultSecurityConfig {
     @Autowired
     private CustomAuthenticationProvider customAuthenticationProvider;
     private final String[] whitelistUrl = {
-            "/authorized/**", "/oauth2/**"
+            "/user/login",
+            "/user/logout",
+            "/captcha",
+            "/favicon.ico",
     };
     @Autowired
     RestAuthenticationEntryPoint restAuthenticationEntryPoint;
 
     @Autowired
     RestfulAccessDeniedHandler restfulAccessDeniedHandler;
+    @Autowired
+    private AuthenticationEntryPoint authenticationEntryPoint;
 
-        @Bean
+    @Autowired
+    private AccessDeniedHandler accessDeniedHandler;
+
+    @Bean
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
-        http.authorizeRequests(authorizeRequests ->
-//                        authorizeRequests.anyRequest().permitAll()
-                        authorizeRequests.antMatchers("/authorized/**","/oauth2/**").permitAll()//除了authorized请求不拦截（webclient请求）其他全部拦截
-                                .anyRequest()
-                                .authenticated()
-        )
-                .formLogin(Customizer.withDefaults()).logout();
+        http                //关闭csrf
+                .csrf()
+                .disable()
+                //不通过Session获取SecurityContext
+                .sessionManagement()
+                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                .and()
+                .authorizeRequests()
+                // 对于登录接口,验证码等接口 允许匿名访问
+                .antMatchers(whitelistUrl).anonymous()
+                // 除上面外的所有请求全部需要鉴权认证
+                .anyRequest().authenticated();
+//        http.authenticationProvider(customAuthenticationProvider);
+//        http.exceptionHandling().authenticationEntryPoint(authenticationEntryPoint).
+//                accessDeniedHandler(accessDeniedHandler);
+        http
+                .headers()
+                .frameOptions()
+                .sameOrigin();
+        //允许跨域
+        http.cors();
+        http.formLogin(Customizer.withDefaults());
         return http.build();
     }
-//    @Bean
-//    SecurityWebFilterChain defaultSecurityFilterChain(ServerHttpSecurity http) throws Exception {
-//        http
-//                .authorizeExchange(authorize -> authorize
-//                        .pathMatchers(whitelistUrl).permitAll()
-//                        .anyExchange().authenticated()
-//                );
-////                .oauth2Login(Customizer.withDefaults());
-//        http.exceptionHandling().authenticationEntryPoint(restAuthenticationEntryPoint).
-//                accessDeniedHandler(restfulAccessDeniedHandler);
-//        return http.build();
-//    }
 
     @Autowired
     public void bindAuthenticationProvider(AuthenticationManagerBuilder authenticationManagerBuilder) {//security指定定制的身份提供者作为认证程序
         authenticationManagerBuilder
                 .authenticationProvider(customAuthenticationProvider);
-    }
-
-    @Bean
-    @Order(Ordered.HIGHEST_PRECEDENCE)
-    public SecurityFilterChain authServerSecurityFilterChain(HttpSecurity http) throws Exception {
-        OAuth2AuthorizationServerConfiguration.applyDefaultSecurity(http);
-
-        return http.formLogin(Customizer.withDefaults()).build();
     }
 
     @Bean

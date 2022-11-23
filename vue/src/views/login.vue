@@ -2,10 +2,10 @@
     <el-row type="flex" class="row-bg" justify="center">
         <el-col :xl="6" :lg="7">
             <h2>欢迎来到VueAdmin管理系统</h2>
-<!--            <el-image :src="require('@/assets/MarkerHub.jpg')" style="height: 180px; width: 180px;"></el-image>-->
+            <!--            <el-image :src="require('@/assets/MarkerHub.jpg')" style="height: 180px; width: 180px;"></el-image>-->
 
-<!--            <p>公众号 MarkerHub</p>-->
-<!--            <p>扫码二维码，回复【 VueAdmin 】获取登录密码</p>-->
+            <!--            <p>公众号 MarkerHub</p>-->
+            <!--            <p>扫码二维码，回复【 VueAdmin 】获取登录密码</p>-->
 
         </el-col>
 
@@ -65,44 +65,40 @@
                         {min: 5, max: 5, message: '长度为 5 个字符', trigger: 'blur'}
                     ],
                 },
-                captchaImg: null
+                captchaImg: ""
             };
         },
         methods: {
             submitForm(formName) {
-                const {proxy} = getCurrentInstance()
-                proxy.$refs[formName].validate((valid) => {
+                // const {proxy} = getCurrentInstance()
+                this.$refs[formName].validate((valid) => {
                     if (valid) {
-                        proxy.$axios.post('/user/login?' + qs.stringify(proxy.loginForm)).then(res => {
-
-                            console.log(res)
-
-                            const jwt = res.headers['authorization']
-
-                            proxy.$store.commit('SET_TOKEN', jwt)
-                            proxy.$router.push("/index")
+                        console.log(qs.stringify(this.loginForm))
+                        this.$axios.post('/api/user/login', qs.stringify(this.loginForm)).then(res => {
+                            // const jwt = res.headers['authorization']
+                            const jwt = res.data.data.token
+                            this.$store.commit('SET_TOKEN', jwt)
+                            this.$router.push("/index")
                         })
-
                     } else {
-                        console.log('error submit!!');
                         return false;
                     }
                 });
             },
             resetForm(formName) {
-                const {proxy} = getCurrentInstance()
-                proxy.$refs[formName].resetFields();
+                // const {proxy} = getCurrentInstance()
+                this.$refs[formName].resetFields();
             },
             getCaptcha() {
-                const {proxy} = getCurrentInstance()
-                proxy.$axios.get('/captcha').then(res => {
-                    debugger
-                    console.log("/captcha")
-                    console.log(res)
+                // const {proxy} = getCurrentInstance()
+                this.$axios.get('/api/captcha').then(res => {
+                    // debugger
+                    // console.log("/captcha")
+                    // console.log(res)
 
-                    proxy.loginForm.token = res.data.data.token
-                    proxy.captchaImg = res.data.data
-                    proxy.loginForm.code = ''
+                    this.loginForm.token = res.data.data.key
+                    this.captchaImg = res.data.data.captcha
+                    this.loginForm.code = ''
                 })
             }
         },

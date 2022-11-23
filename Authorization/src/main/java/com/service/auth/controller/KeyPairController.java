@@ -14,18 +14,17 @@ import java.util.Map;
  * @author hjl
  * @date 2022/9/20 10:51
  */
-@RestController
+//@RestController
 public class KeyPairController {
+
 //    @Autowired
 //    private KeyPair keyPair;
-    @GetMapping("/oauth2/hello")
-    public String hello(){
-        return "hello spring cloud";
-    }
+//
 //    @GetMapping("/rsa/publicKey")
 //    public Map<String, Object> getKey() {
 //        RSAPublicKey publicKey = (RSAPublicKey) keyPair.getPublic();
 //        RSAKey key = new RSAKey.Builder(publicKey).build();
 //        return new JWKSet(key).toJSONObject();
 //    }
+
 }

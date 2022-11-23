@@ -20,12 +20,13 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Objects;
 
-@Component
+//@Component
 public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
     @Autowired
     private RedisCache redisCache;
     @Autowired
     AuthenticationEntryPointImpl authenticationEntryPointImpl;
+
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         String token = request.getHeader("token");//前端将携带jwt请求过滤器
@@ -37,20 +38,20 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
                 id = claims.getSubject();//解析JWT的id
             } catch (Exception e) {
                 e.printStackTrace();
-                authenticationEntryPointImpl.setMsg("非法的Token");
+                authenticationEntryPointImpl.setMessage("非法的Token");
                 throw new RuntimeException("非法的Token");
             }
             //从redis中获取用户信息
             String redisKey = "login:" + id;
             User loginUser = redisCache.getCacheObject(redisKey);//根据登录的id去redis中查找是否存在这个数据
             if (Objects.isNull(loginUser)) {
-                authenticationEntryPointImpl.setMsg("用户未登录");
+                authenticationEntryPointImpl.setMessage("用户未登录");
                 throw new RuntimeException("用户未登录");
             }
             //存入SecurityContextHolder
             //TODO 获取权限信息封装到Authentication中
             UsernamePasswordAuthenticationToken authenticationToken =
-                    new UsernamePasswordAuthenticationToken(loginUser,null,loginUser.getAuthorities());//使用user这个类是为了封装authenticationToken,并设置authentication为认证状态
+                    new UsernamePasswordAuthenticationToken(loginUser, null, loginUser.getAuthorities());//使用user这个类是为了封装authenticationToken,并设置authentication为认证状态
             SecurityContextHolder.getContext().setAuthentication(authenticationToken);//将authentication存入SecurityContextHolder,以便提供其它过滤器使用
             filterChain.doFilter(request, response);
         } else {

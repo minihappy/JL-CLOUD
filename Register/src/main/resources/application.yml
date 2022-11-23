@@ -1,6 +1,20 @@
 server:
   port: 8000
 spring:
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  datasource:
+    initialization-mode=always:
+    url: jdbc:mysql://localhost:3306/mytestdb?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
   application:
     name: register-nacos
   cloud:

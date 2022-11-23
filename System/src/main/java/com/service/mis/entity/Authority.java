@@ -43,7 +43,7 @@ public class Authority implements Serializable {
 //        this.created = new Date();
 //    }
 
-//    private Date updated;
+    //    private Date updated;
     private int status;
     @Transient
     private List<Authority> children = new ArrayList<>();

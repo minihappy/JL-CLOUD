@@ -9,9 +9,16 @@
         <option value="$PROJECT_DIR$/SignupsServiceNaCos/pom.xml" />
         <option value="$PROJECT_DIR$/MisServiceNaCos/pom.xml" />
         <option value="$PROJECT_DIR$/AuthorityService/pom.xml" />
-        <option value="$PROJECT_DIR$/Common/pom.xml" />
-        <option value="$PROJECT_DIR$/Gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/Authorization/pom.xml" />
+        <option value="$PROJECT_DIR$/Sys-Source/pom.xml" />
+        <option value="$PROJECT_DIR$/Register/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/Sign-up/pom.xml" />
+        <option value="$PROJECT_DIR$/System/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">

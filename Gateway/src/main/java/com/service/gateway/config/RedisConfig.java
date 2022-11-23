@@ -4,7 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
+import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 /**
@@ -14,7 +14,7 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
  * @date 2022/9/20 16:13
  */
 
-//@Configuration
+@Configuration
 public class RedisConfig {
 
     @Bean
@@ -26,9 +26,9 @@ public class RedisConfig {
         // hash的key也采用String的序列化方式
         template.setHashKeySerializer(new StringRedisSerializer());
         // value序列化方式采用jackson
-        template.setValueSerializer(new GenericJackson2JsonRedisSerializer());
+        template.setValueSerializer(new Jackson2JsonRedisSerializer<>(Object.class));
         // hash的value序列化方式采用jackson
-        template.setHashValueSerializer(new GenericJackson2JsonRedisSerializer());
+        template.setHashValueSerializer(new Jackson2JsonRedisSerializer<>(Object.class));
         template.afterPropertiesSet();
         return template;
     }

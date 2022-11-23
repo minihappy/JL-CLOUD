@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/RegisterEnumKey")
 public class EnumKeyController {
     @GetMapping("/hello")
-    public ResponseResult hello(){
-        return new ResponseResult(200,"hello");
+    public ResponseResult hello() {
+        return new ResponseResult(200, "hello");
     }
 }

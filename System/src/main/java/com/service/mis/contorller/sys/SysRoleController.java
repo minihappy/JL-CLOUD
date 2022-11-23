@@ -14,7 +14,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -33,6 +32,7 @@ import static com.service.mis.dto.AuthorityDto.buildTreeMenu;
  * @author 我的公众号：MarkerHub
  * @since 2021-04-05
  */
+@CrossOrigin
 @RestController
 @RequestMapping("/sys/role")
 public class SysRoleController {

@@ -32,22 +32,12 @@ public class CustomUserDetailsService implements UserDetailsService {
     }
 
     @Override
-    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {//重写userDetails的登录
-        User user = userRepository.findByEmail(email);
-        List<String> list = new ArrayList<>();
-        list.add(user.getRole());
+    public UserDetails loadUserByUsername(String userParam) throws UsernameNotFoundException {//重写userDetails的登录
+        User user = userRepository.findByUsername(userParam);
         if (user == null) {//找不到用户就抛出异常
             throw new UsernameNotFoundException("No User Found");
         }
-        return new org.springframework.security.core.userdetails.User(
-                user.getEmail(),
-                user.getPassword(),
-                user.isEnabled(),
-                true,
-                true,
-                true,
-                getAuthorities(list)
-        );
+        return user;
     }
 
     private Collection<? extends GrantedAuthority> getAuthorities(List<String> roles) {//根据角色获取权限

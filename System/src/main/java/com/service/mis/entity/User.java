@@ -36,8 +36,8 @@ public class User implements UserDetails {
     private String email;
     private String phone;
     private int status;
-/*    @CreatedDate
-    private Date created;*/
+    /*    @CreatedDate
+        private Date created;*/
 //    @JsonIgnore
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(

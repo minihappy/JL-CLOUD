@@ -6,5 +6,6 @@ import org.springframework.security.core.Authentication;
 
 public interface LoginService {
     ResponseResult login(User user);
+
     ResponseResult logout();
 }

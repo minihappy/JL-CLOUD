@@ -15,15 +15,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@Component
+//@Component
 public class AccessDeniedHandlerImpl implements AccessDeniedHandler {
     @Setter
-    private String msg = "您的权限不足";
+    private String message = "您的权限不足";
+
     @Override
     public void handle(HttpServletRequest request, HttpServletResponse response, AccessDeniedException accessDeniedException) throws IOException, ServletException {
-        ResponseResult result = new ResponseResult(HttpStatus.FORBIDDEN.value(),msg);
+        ResponseResult result = new ResponseResult(HttpStatus.FORBIDDEN.value(), message);
         String json = JSON.toJSONString(result);
         //处理异常
-        WebUtils.renderString(response,json,403);
+        WebUtils.renderString(response, json, 403);
     }
 }
