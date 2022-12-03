@@ -142,13 +142,14 @@ public class SysAuthorityController {
         }
 //        // 清除所有与该菜单相关的权限缓存
 //        userRepository.deleteUserAuthorityByAuthorityId(id);
-        User user = userRepository.findUserById(id);
-        List<Role> role = user.getRole();
-        for (int i = 0; i < role.size(); i++) {
-            count += authorityRepository.deleteRoleAndAuthority(role.get(i).getId(), id);
-        }
+//        User user = userRepository.findUserById(id);
+//        List<Role> role = user.getRole();
+//        for (int i = 0; i < role.size(); i++) {
+//            count += authorityRepository.deleteRoleAndAuthority(role.get(i).getId(), id);
+//        }
+        authorityRepository.deleteById(id);
         if (count > 0) {
-            authorityRepository.deleteById(id);
+//            authorityRepository.deleteById(id);
         } else {
             return new ResponseResult(202, "删除用户和权限失败，程序停止");
         }

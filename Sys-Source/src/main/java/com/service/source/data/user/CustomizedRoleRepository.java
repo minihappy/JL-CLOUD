@@ -14,5 +14,5 @@ public interface CustomizedRoleRepository {
 
     int addRoleAuthRelation(Long role_id, Long authority_id);
 
-    int deleteRoleAllRelation(Long[] role_id);
+    void deleteRoleAllRelation(Long[] role_id);
 }

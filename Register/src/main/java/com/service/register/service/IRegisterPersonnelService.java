@@ -5,12 +5,13 @@ import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
  * <p>
- *  服务类
+ * 服务类
  * </p>
  *
  * @author hjl
  * @since 2022-11-17
  */
 public interface IRegisterPersonnelService extends IService<RegisterPersonnel> {
+    boolean sentProcessToEmail(String email);
 
 }

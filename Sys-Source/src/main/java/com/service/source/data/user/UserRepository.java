@@ -26,6 +26,11 @@ public interface UserRepository extends PagingAndSortingRepository<User, Long>, 
 
     @Modifying
     @Transactional
+    @Query(value = "select user_id from user_role  where  role_id in (:id) ", nativeQuery = true)
+    List<Long> findUserIdByRoleId(@Param("id") Long roleId);
+
+    @Modifying
+    @Transactional
     @Query("delete  from User u  where  u.id in (:id) ")
     int deleteUserByIds(@Param("id") List<Long> id);
 }

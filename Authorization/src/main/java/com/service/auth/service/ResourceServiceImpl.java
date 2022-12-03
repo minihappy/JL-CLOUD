@@ -42,6 +42,27 @@ public class ResourceServiceImpl {
         resourceRolesMap.put("/sys-comm/sys/role/info", list);
         resourceRolesMap.put("/sys-comm/sys/menu/info", list);
         resourceRolesMap.put("/sys-comm/sys/role/authList", list);
+
+        resourceRolesMap.put("/sys-comm/sys/register/list", list);
+        resourceRolesMap.put("/sys-comm/sys/register/save", list);
+        resourceRolesMap.put("/sys-comm/sys/register/update", list);
+        resourceRolesMap.put("/sys-comm/sys/register/info", list);
+        resourceRolesMap.put("/sys-comm/sys/register/delete", list);
+
+        resourceRolesMap.put("/sys-comm/sys/personnel/list", list);
+        resourceRolesMap.put("/sys-comm/sys/personnel/info", list);
+        resourceRolesMap.put("/sys-comm/sys/personnel/update", list);
+        resourceRolesMap.put("/sys-comm/sys/personnel/save", list);
+        resourceRolesMap.put("/sys-comm/sys/personnel/delete", list);
+        resourceRolesMap.put("/sys-comm/sys/personnel/pass", list);
+        resourceRolesMap.put("/sys-comm/sys/personnel/unPass", list);
+        resourceRolesMap.put("/sys-comm/sys/personnel/doingRegister", list);
+
+        resourceRolesMap.put("/sys-comm/sys/handbook/list", list);
+        resourceRolesMap.put("/sys-comm/sys/handbook/info", list);
+        resourceRolesMap.put("/sys-comm/sys/handbook/update", list);
+        resourceRolesMap.put("/sys-comm/sys/handbook/save", list);
+        resourceRolesMap.put("/sys-comm/sys/handbook/delete", list);
         all.stream().map(authority -> authority.getPerms()).collect(Collectors.toList()).forEach(permission -> {
             resourceRolesMap.put("/sys-comm/" + permission.replace(":", "/"), list);
         });

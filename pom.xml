@@ -19,7 +19,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>        <!--指定jdk版本-->
         <maven.compiler.target>1.8</maven.compiler.target>        <!--指定jdk版本-->
         <java.version>1.8</java.version>
-        <spring.version>2.7.0</spring.version>
+        <spring.version>2.7.6</spring.version>
         <spring.cloud.version>2021.0.1</spring.cloud.version>
         <spring.cloud.alibaba.version>2021.0.1.0</spring.cloud.alibaba.version>
 <!--        <mybatis.plus.starter.version>3.5.1</mybatis.plus.starter.version>-->

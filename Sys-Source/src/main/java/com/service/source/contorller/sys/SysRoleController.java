@@ -103,11 +103,9 @@ public class SysRoleController {
 //    @PreAuthorize("hasAuthority('sys:role:delete')")
     @Transactional
     public ResponseResult info(@RequestBody Long[] ids) {
-        int i = roleRepository.deleteRoleAllRelation(ids);
-        if (i == ids.length) {
-            for (Long id : ids) {
-                roleRepository.deleteById(id);
-            }
+        roleRepository.deleteRoleAllRelation(ids);
+        for (Long id : ids) {
+            roleRepository.deleteById(id);
         }
         return new ResponseResult(200, "成功");
     }
@@ -120,9 +118,14 @@ public class SysRoleController {
         roleRepository.deleteRoleAuthRelation(roleId);
         Arrays.stream(menuIds).forEach(menuId -> {
             roleRepository.addRoleAuthRelation(roleId, menuId);
-        });//这里应该使用消息队列，把用户权限的修改推送到中间件中，然后各个系统进行同步更新权限
-        JSONObject roleObject = JSONObject.parseObject(roleRepository.findRoleById(roleId).toString());
-        rabbitMQServiceImpl.sendMsgByTopicExchange(roleObject.toJSONString(),"change_role.all");
+        });//使用消息队列，把用户权限的修改推送到中间件中，然后各个系统进行同步更新权限
+        List<RoleAuthorityDto> roleById = roleRepository.findRoleById(roleId);
+        List<Long> userIdByRoleId = userRepository.findUserIdByRoleId(roleId);
+        String AfterChangeRoleValue = JSONObject.toJSONString(RoleAuthorityDto.setChildrenAndFatherToDto(roleById));
+        userIdByRoleId.forEach(id -> {
+            redisCache.setCacheMapValue("login:" + id, "role", JSONArray.parseArray(AfterChangeRoleValue));
+        });
+//        rabbitMQServiceImpl.sendMsgByTopicExchange(AfterChangeRoleValue, "change.role.all");
         return new ResponseResult(200, "成功");
     }
 

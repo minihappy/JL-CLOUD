@@ -45,7 +45,7 @@ public class CustomizedRoleRepositoryImpl implements CustomizedRoleRepository {
     }
 
     @Override
-    public int deleteRoleAllRelation(Long[] role_ids) {
+    public void deleteRoleAllRelation(Long[] role_ids) {
         String roleUser, roleAuthority;
         String[] sqlArray = new String[role_ids.length * 2];
         for (int i = 0; i < role_ids.length; i++) {
@@ -55,6 +55,6 @@ public class CustomizedRoleRepositoryImpl implements CustomizedRoleRepository {
             sqlArray[i + 1] = roleAuthority;
         }
         int[] ints = batchUpdate(sqlArray);
-        return ints.length / 2;
+//        return ints.length % 2;
     }
 }

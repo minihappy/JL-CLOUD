@@ -104,6 +104,10 @@ INSERT INTO role_authority(role_id,authority_id) VALUES (1, 15);
 INSERT INTO role_authority(role_id,authority_id) VALUES (1, 16);
 INSERT INTO role_authority(role_id,authority_id) VALUES (1, 17);
 INSERT INTO role_authority(role_id,authority_id) VALUES (1, 18);
+INSERT INTO role_authority(role_id,authority_id) VALUES (1, 19);
+INSERT INTO role_authority(role_id,authority_id) VALUES (1, 20);
+INSERT INTO role_authority(role_id,authority_id) VALUES (1, 21);
+INSERT INTO role_authority(role_id,authority_id) VALUES (1, 22);
 INSERT INTO role (id,name,code) values(1,'系统管理员','ADMIN');
 INSERT INTO user(id,username,password,email,phone,`status`,create_Time,enabled) values (1,'admin', '$2a$10$y4dap5NfUnwAYG1vwC0RguJL/3wdL/SgJ7mDtA3yqr9yQdmCWfC1S','550610344@qq.com','18815476963',1,NOW(),1);
 INSERT INTO `authority`( `id`,`parent_id`,`name`, `path`, `perms`, `component`,`type`,`icon`,`order_Num`,`create_Time`,`change_Time`,`status`) VALUES ('1', '0', '系统管理', '', 'sys:manage', '', '0', 'el-icon-s-operation', '1',NOW(), null, '1');
@@ -124,10 +128,10 @@ INSERT INTO `authority`( `id`,`parent_id`,`name`, `path`, `perms`, `component`,`
 INSERT INTO `authority`( `id`,`parent_id`,`name`, `path`, `perms`, `component`,`type`,`icon`,`order_Num`,`create_Time`,`change_Time`,`status`) VALUES ('16', '4', '添加菜单', null, 'sys:menu:save', null, '2', null, '1', NOW(), null, '1');
 INSERT INTO `authority`( `id`,`parent_id`,`name`, `path`, `perms`, `component`,`type`,`icon`,`order_Num`,`create_Time`,`change_Time`,`status`) VALUES ('17', '4', '修改菜单', null, 'sys:menu:update', null, '2', null, '2', NOW(), null, '1');
 INSERT INTO `authority`( `id`,`parent_id`,`name`, `path`, `perms`, `component`,`type`,`icon`,`order_Num`,`create_Time`,`change_Time`,`status`) VALUES ('18', '4', '删除菜单', null, 'sys:menu:delete', null, '2', null, '3', NOW(), null, '1');
-INSERT INTO `authority`( `id`,`parent_id`,`name`, `path`, `perms`, `component`,`type`,`icon`,`order_Num`,`create_Time`,`change_Time`,`status`) VALUES ('19', '4', '删除菜单', null, 'sys:menu:delete', null, '2', null, '3', NOW(), null, '1');
-INSERT INTO `authority`( `id`,`parent_id`,`name`, `path`, `perms`, `component`,`type`,`icon`,`order_Num`,`create_Time`,`change_Time`,`status`) VALUES ('20', '4', '删除菜单', null, 'sys:menu:delete', null, '2', null, '3', NOW(), null, '1');
-INSERT INTO `authority`( `id`,`parent_id`,`name`, `path`, `perms`, `component`,`type`,`icon`,`order_Num`,`create_Time`,`change_Time`,`status`) VALUES ('21', '4', '删除菜单', null, 'sys:menu:delete', null, '2', null, '3', NOW(), null, '1');
-INSERT INTO `authority`( `id`,`parent_id`,`name`, `path`, `perms`, `component`,`type`,`icon`,`order_Num`,`create_Time`,`change_Time`,`status`) VALUES ('22', '4', '删除菜单', null, 'sys:menu:delete', null, '2', null, '3', NOW(), null, '1');
+INSERT INTO `authority`( `id`,`parent_id`,`name`, `path`, `perms`, `component`,`type`,`icon`,`order_Num`,`create_Time`,`change_Time`,`status`) VALUES ('19', '0', '报名管理', null, 'sys:register', null, '0', null, '3', NOW(), null, '1');
+INSERT INTO `authority`( `id`,`parent_id`,`name`, `path`, `perms`, `component`,`type`,`icon`,`order_Num`,`create_Time`,`change_Time`,`status`) VALUES ('20', '19', '报名人员', '/register/personnel', 'sys:personnel', 'register/handbook' , '1', null, '1', NOW(), null, '1');
+INSERT INTO `authority`( `id`,`parent_id`,`name`, `path`, `perms`, `component`,`type`,`icon`,`order_Num`,`create_Time`,`change_Time`,`status`) VALUES ('21', '19', '报名配置', '/register/register', 'sys:register', 'register/register' , '1', null, '2', NOW(), null, '1');
+INSERT INTO `authority`( `id`,`parent_id`,`name`, `path`, `perms`, `component`,`type`,`icon`,`order_Num`,`create_Time`,`change_Time`,`status`) VALUES ('22', '19', '报名手册', '/register/handbook', 'sys:handbook', 'register/personnel' , '1', null, '3', NOW(), null, '1');
 set foreign_key_checks=1;
 CREATE TABLE oauth2_registered_client (
     id varchar(100) NOT NULL,

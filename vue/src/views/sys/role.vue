@@ -318,7 +318,11 @@
                     })
                 }
 
-                this.$axios.post("/sys-comm/sys/role/delete", ids).then(res => {
+                this.$axios.post("/sys-comm/sys/role/delete", ids,{
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                }).then(res => {
                     this.$message({
                         showClose: true,
                         message: '恭喜你，操作成功',

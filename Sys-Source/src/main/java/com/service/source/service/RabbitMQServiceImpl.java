@@ -38,14 +38,15 @@ public class RabbitMQServiceImpl implements RabbitMQService {
 
     @Override
     public String sendMsg(String msg) throws Exception {
-        try {
-            Map<String, Object> map = msgToMap(msg);
-            rabbitTemplate.convertAndSend(RabbitMQConfig.RABBITMQ_DIRECT_EXCHANGE, RabbitMQConfig.RABBITMQ_DIRECT_ROUTING, map);
-            return "ok";
-        } catch (Exception e) {
-            e.printStackTrace();
-            return "error";
-        }
+//        try {
+//            Map<String, Object> map = msgToMap(msg);
+//            rabbitTemplate.convertAndSend(RabbitMQConfig.RABBITMQ_DIRECT_EXCHANGE, RabbitMQConfig.RABBITMQ_DIRECT_ROUTING, map);
+//            return "ok";
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            return "error";
+//        }
+        return null;
     }
 
     @Override
@@ -54,7 +55,6 @@ public class RabbitMQServiceImpl implements RabbitMQService {
     }
 
     /**
-     *
      * @param msg:要发送的消息队列
      * @param routingKey：要匹配的路由
      * @return
@@ -64,7 +64,7 @@ public class RabbitMQServiceImpl implements RabbitMQService {
     public String sendMsgByTopicExchange(String msg, String routingKey) throws Exception {
         try {
             Map<String, Object> map = msgToMap(msg);
-            rabbitTemplate.convertAndSend(RabbitMQConfig.RABBITMQ_DIRECT_EXCHANGE, routingKey, map);
+            rabbitTemplate.convertAndSend(RabbitMQConfig.System.RABBITMQ_SYSTEM_CHANGE_ROLE_TOPIC_EXCHANGE, routingKey, map);
             return "ok";
         } catch (Exception e) {
             e.printStackTrace();

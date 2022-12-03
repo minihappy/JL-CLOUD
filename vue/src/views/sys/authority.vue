@@ -41,6 +41,7 @@
                     <el-tag size="small" v-if="scope.row.type === 0">目录</el-tag>
                     <el-tag size="small" v-else-if="scope.row.type === 1" type="success">菜单</el-tag>
                     <el-tag size="small" v-else-if="scope.row.type === 2" type="info">按钮</el-tag>
+                    <el-tag size="small" v-else-if="scope.row.type === 3" type="warning">方法</el-tag>
                 </template>
 
             </el-table-column>
@@ -142,6 +143,7 @@
                         <el-radio :label=0>目录</el-radio>
                         <el-radio :label=1>菜单</el-radio>
                         <el-radio :label=2>按钮</el-radio>
+                        <el-radio :label=3>方法</el-radio>
                     </el-radio-group>
                 </el-form-item>
 

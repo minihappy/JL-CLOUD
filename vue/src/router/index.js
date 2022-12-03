@@ -62,6 +62,7 @@ const router = createRouter({
     history: createWebHistory(process.env.BASE_URL),
     routes
 })
+let registerRouteFresh = true
 router.beforeEach((to, from, next) => {//在路由操作前遍历调用
     let hasRoute = store.state.menus.hasRoutes
     let token = localStorage.getItem("token")//获取token
@@ -70,7 +71,6 @@ router.beforeEach((to, from, next) => {//在路由操作前遍历调用
 
     } else if (!token) {
         next({path: '/'})
-
 
     } else if (token && !hasRoute) {
         axios.get("/sys-comm/sys/menu/nav").then(res => {
@@ -99,17 +99,26 @@ router.beforeEach((to, from, next) => {//在路由操作前遍历调用
                 }
             })
             // router.addRoutes(newRoutes)//vue2写法
-            newRoutes.forEach(newRoute => {
-                router.addRoute(newRoute)
-            }) //vue3写法
+            // newRoutes.forEach(newRoute => {
+            //     router.addRoute(newRoute)
+            // }) //vue3写法
+            if (registerRouteFresh) {
+                newRoutes.forEach((val) => {
+                    router.addRoute(val)
+                })
+                next({...to, replace: true})
+                registerRouteFresh = false
+            } else {
+                next()
+            }
             hasRoute = true//获取得到权限后，设置已经存储了路由标识，后面操作就不会重新获取页面的路由了
             store.commit("changeRouteStatus", hasRoute)
         })
     }
-
-
-    next()
+    if (hasRoute)//当获取过权限的，遍历过一次再执行
+        next()
 })
+// 如果首次或者刷新界面，next(...to, replace: true)会循环遍历路由，如果to找不到对应的路由那么他会再执行一次beforeEach((to, from, next))直到找到对应的路由，我们的问题在于页面刷新以后异步获取数据，直接执行next()感觉路由添加了但是在next()之后执行的，所以我们没法导航到相应的界面。这里使用变量registerRouteFresh变量做记录，直到找到相应的路由以后，把值设置为false然后走else执行next(),整个流程就走完了，路由也就添加完了。
 // 导航转成路由
 const menuToRoute = (menu) => {
 
