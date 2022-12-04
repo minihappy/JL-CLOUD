@@ -10,22 +10,26 @@ spring:
       discovery:
         server-addr: localhost:8848
     gateway:
-      globalcors: # 全局的跨域处理
-        add-to-simple-url-handler-mapping: true # 解决options请求被拦截问题
-        corsConfigurations:
-          '[/**]':
-            allowedOrigins: # 允许哪些网站的跨域请求 allowedOrigins: “*” 允许所有网站
-              - "http://localhost:8080"
-              - "http://127.0.0.1:8080"
-            allowedMethods: # 允许的跨域ajakzx的请求方式
-              - "GET"
-              - "POST"
-              - "DELETE"
-              - "PUT"
-              - "OPTIONS"
-            allowedHeaders: "*" # 允许在请求中携带的头信息
-            allowCredentials: true # 是否允许携带cookie
-            maxAge: 360000 # 这次跨域检测的有效期
+      #      globalcors: # 全局的跨域处理
+      #        add-to-simple-url-handler-mapping: true # 解决options请求被拦截问题
+      #        corsConfigurations:
+      #          '[/**]':
+      #            allowedOrigins: # 允许哪些网站的跨域请求 allowedOrigins: “*” 允许所有网站
+      #              - "http://localhost:8080"
+      #              - "http://127.0.0.1:8080"
+#      globalcors:
+#        cors-configurations:
+#          '[/**]': # 匹配所有请求
+#            allowedOrigins: "*" #跨域处理 允许所有的域
+#            allowedMethods: # 允许的跨域ajakzx的请求方式
+#              - "GET"
+#              - "POST"
+#              - "DELETE"
+#              - "PUT"
+#              - "OPTIONS"
+#            allowedOriginPatterns: "*" # 允许在请求中携带的头信息
+#            allowCredentials: true # 是否允许携带cookie
+#            maxAge: 360000 # 这次跨域检测的有效期
       routes: #配置路由路径
         #        - id: oauth2-api-route
         #          uri: lb://micro-oauth2-api
@@ -47,38 +51,44 @@ spring:
             - Path=/api/**
           filters:
             - StripPrefix=1
+        - id: register
+          uri: lb://Register
+          predicates:
+            - Path=/register/**
+          filters:
+            - StripPrefix=1
       discovery:
         locator:
           enabled: true #开启从注册中心动态创建路由的功能
           lower-case-service-id: true #使用小写服务名，默认是大写
   security:
     oauth2:
-      client:
-        registration:
-          api-client-oidc:
-            provider: Authorization
-            client-id: client-app
-            client-secret: 123456
-            authorization-grant-type: authorization_code
-            redirect-uri: '{baseUrl}/{action}/oauth2/code/{registrationId}'
-            scope: ADMIN,TEST
-            client-name: api-client-oidc
+#      client:
+#        registration:
+#          api-client-oidc:
+#            provider: Authorization
+#            client-id: client-app
+#            client-secret: 123456
+#            authorization-grant-type: authorization_code
+#            redirect-uri: '{baseUrl}/{action}/oauth2/code/{registrationId}'
+#            scope: ADMIN,TEST
+#            client-name: api-client-oidc
           #            在不受信任的环境中运行时使用代码交换证明密钥（pkce）
           #  1.client-secret被省略（或为空）
           #
           #  2.client-authentication-method设置为“无”（ClientAuthenticationMethod.NONE）
-          api-client-authorization-code:
-            provider: Authorization
-            client-id: client-app
-            client-secret: 123456
-            authorization-grant-type: authorization_code
-            redirect-uri: "{baseUrl}/{action}/authorized"
-            scope: ADMIN,TEST
-            client-name: api-client-authorization-code
-        provider:
-          # 服务提供地址
-          Authorization:
-            issuer-uri: http://auth-server:9000
+#          api-client-authorization-code:
+#            provider: Authorization
+#            client-id: client-app
+#            client-secret: 123456
+#            authorization-grant-type: authorization_code
+#            redirect-uri: "{baseUrl}/{action}/authorized"
+#            scope: ADMIN,TEST
+#            client-name: api-client-authorization-code
+#        provider:
+#          # 服务提供地址
+#          Authorization:
+#            issuer-uri: http://auth-server:9000
       #        registration:
       #          # 客户端：与注册时保持一致
       ##          myClient:
@@ -135,4 +145,5 @@ secure:
       - "/captcha"
       - "/favicon.ico"
       - "/api/**"
+      - "/register/**"
 #      - "/sys-comm/**"

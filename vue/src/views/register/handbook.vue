@@ -36,7 +36,23 @@
 
 <script>
     export default {
-        name: "handbook"
+        name: "handbook",
+        data() {
+            return {
+                register: [],
+                multipleSelection: [],
+                defaultStartTime: new Date(2000, 1, 1, 0, 0, 0),
+                defaultEndTime: new Date(2000, 1, 1, 0, 0, 0),
+                checkStatus: true,//
+                searchForm: {},//
+                total: 0,
+                size: 10,
+                current: 1,
+                tableData: [],
+                editForm: {},
+                dialogVisible: false,//新增窗口打开关闭
+            }
+        }
     }
 </script>
 

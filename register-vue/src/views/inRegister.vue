@@ -11,27 +11,29 @@
                     <el-row type="flex" class="row-bg" justify="center" style="height: 100%;align-items: center;">
                         <!--                        style="display: contents;"-->
                         <el-col :xl="5" :lg="6">
-                            <el-form :model="inRegisterForm" :rules="rules" ref="loginForm" label-width="80px">
-                                <el-form-item label="报名主题" prop="registerName" style="width: 380px;">
-                                    <el-input v-model="inRegisterForm.registerName"></el-input>
-                                </el-form-item>
-                                <el-form-item label="用户名" prop="name" style="width: 380px;">
-                                    <el-input v-model="inRegisterForm.name"></el-input>
-                                </el-form-item>
-                                <el-form-item label="电子邮箱" prop="email" style="width: 380px;">
-                                    <el-input v-model="inRegisterForm.email"></el-input>
-                                </el-form-item>
-                                <el-form-item label="验证码" prop="code" style="width: 380px;">
-                                    <el-input v-model="inRegisterForm.code" style="width: 172px; float: left"
-                                              maxlength="5"></el-input>
-                                    <el-image :src="captchaImg" class="captchaImg" @click="getCaptcha"></el-image>
-                                </el-form-item>
+                            <div style="display: flex;justify-content: center;">
+                                <el-form :model="inRegisterForm" :rules="rules" ref="loginForm" label-width="80px">
+                                    <el-form-item label="报名主题" prop="registerName" style="width: 380px;">
+                                        <el-input v-model="inRegisterForm.registerName"></el-input>
+                                    </el-form-item>
+                                    <el-form-item label="用户名" prop="name" style="width: 380px;">
+                                        <el-input v-model="inRegisterForm.name"></el-input>
+                                    </el-form-item>
+                                    <el-form-item label="电子邮箱" prop="email" style="width: 380px;">
+                                        <el-input v-model="inRegisterForm.email"></el-input>
+                                    </el-form-item>
+                                    <el-form-item label="验证码" prop="code" style="width: 380px;">
+                                        <el-input v-model="inRegisterForm.code" style="width: 172px; float: left"
+                                                  maxlength="5"></el-input>
+                                        <el-image :src="captchaImg" class="captchaImg" @click="getCaptcha"></el-image>
+                                    </el-form-item>
 
-                                <el-form-item>
-                                    <el-button type="primary" @click="submitForm('loginForm')">立即创建</el-button>
-                                    <el-button @click="resetForm('loginForm')">重置</el-button>
-                                </el-form-item>
-                            </el-form>
+                                    <el-form-item>
+                                        <el-button type="primary" @click="submitForm('loginForm')">立即创建</el-button>
+                                        <el-button @click="resetForm('loginForm')">重置</el-button>
+                                    </el-form-item>
+                                </el-form>
+                            </div>
                         </el-col>
                         <el-col :xl="3" :lg="4">
                             <el-button style="font-size: 20px;" type="danger"
@@ -58,6 +60,8 @@
 
 
 <script>
+    import qs from 'qs'
+
     export default {
         name: "inRegister.vue",
         watch: {//监听改变
@@ -65,15 +69,18 @@
         },
         methods: {//方法区
             getCaptcha() {
-                this.$axios.get('/captcha').then(res => {
+                this.$axios.get('/register/captcha').then(res => {
+                    this.inRegisterForm.token = res.data.data.key
                     this.captchaImg = res.data.data.captcha
-                    this.inRegisterForm.code = ''
+                    this.$store.commit('SET_TOKEN', this.inRegisterForm.token)
                 })
             }, submitForm(formName) {
                 // const {proxy} = getCurrentInstance()
                 this.$refs[formName].validate((valid) => {
                     if (valid) {
-                        this.$router.push({name: 'register', query: this.inRegisterForm})
+                        this.$axios.post('/register/registerPersonnel/inRegister', qs.stringify(this.inRegisterForm)).then(res => {
+                            this.$router.push({name: 'register', query: this.inRegisterForm})
+                        })
                     } else {
                         return false;
                     }

@@ -43,22 +43,27 @@
     >
         <router-link to="/index">
             <el-menu-item index="Index" @click="selectMenu({name: 'index', title: '首页'})">
-                <i class="el-icon-s-home"></i>
+                <el-icon>
+                    <HomeFilled/>
+                </el-icon>
                 <span slot="title">首页</span>
             </el-menu-item>
         </router-link>
         <el-sub-menu :index="menu.name" v-for="menu in menuList">
             <template #title>
                 <el-icon>
-                    <location/>
+                    <Menu/>
                 </el-icon>
-                <i :class="menu.icon"></i>
+                <!--                <i :class="menu.icon"></i>-->
                 <span>{{menu.title}}</span>
             </template>
             <router-link :to="item.path" v-for="item in menu.children">
                 <template #title>{{item.title}}</template>
                 <el-menu-item :index="item.name" @click="selectMenu(item)">
-                    <i :class="item.icon"></i>
+                    <el-icon>
+                        <component :is="item.icon"></component>
+                    </el-icon>
+                    <!--                    <i :class="item.icon"></i>-->
                     <span slot="title">{{item.title}}</span>
                 </el-menu-item>
             </router-link>

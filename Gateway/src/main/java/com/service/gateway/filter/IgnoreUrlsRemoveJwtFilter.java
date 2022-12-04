@@ -3,6 +3,7 @@ package com.service.gateway.filter;
 
 import com.service.gateway.config.IgnoreUrlsConfig;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.Ordered;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.stereotype.Component;
 import org.springframework.util.AntPathMatcher;
@@ -20,7 +21,7 @@ import java.util.List;
  * Created by macro on 2020/7/24.
  */
 @Component
-public class IgnoreUrlsRemoveJwtFilter implements WebFilter {
+public class IgnoreUrlsRemoveJwtFilter implements WebFilter, Ordered {
     @Autowired
     private IgnoreUrlsConfig ignoreUrlsConfig;
 
@@ -39,5 +40,10 @@ public class IgnoreUrlsRemoveJwtFilter implements WebFilter {
             }
         }
         return chain.filter(exchange);
+    }
+
+    @Override
+    public int getOrder() {
+        return 0;
     }
 }

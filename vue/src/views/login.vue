@@ -1,18 +1,18 @@
 <template>
     <el-row type="flex" class="row-bg" justify="center">
         <el-col :xl="6" :lg="7">
-            <h2>欢迎来到VueAdmin管理系统</h2>
+            <h2>欢迎来到JL-CLOUD管理系统</h2>
             <!--            <el-image :src="require('@/assets/MarkerHub.jpg')" style="height: 180px; width: 180px;"></el-image>-->
 
-            <!--            <p>公众号 MarkerHub</p>-->
-            <!--            <p>扫码二维码，回复【 VueAdmin 】获取登录密码</p>-->
+            <p>账号:admin</p>
+            <p>密码:123456</p>
 
         </el-col>
 
-        <el-col :span="1">
-            <el-divider direction="vertical"></el-divider>
-        </el-col>
-        <el-col :xl="6" :lg="7">
+<!--        <el-col :span="1">-->
+<!--            <el-divider direction="vertical"></el-divider>-->
+<!--        </el-col>-->
+        <el-col :xl="6" :lg="7" style="display: flex;justify-content: center;">
             <el-form :model="loginForm" :rules="rules" ref="loginForm" label-width="80px">
                 <el-form-item label="用户名" prop="username" style="width: 380px;">
                     <el-input v-model="loginForm.username"></el-input>
@@ -73,7 +73,6 @@
                 // const {proxy} = getCurrentInstance()
                 this.$refs[formName].validate((valid) => {
                     if (valid) {
-                        console.log(qs.stringify(this.loginForm))
                         this.$axios.post('/api/user/login', qs.stringify(this.loginForm)).then(res => {
                             // const jwt = res.headers['authorization']
                             const jwt = res.data.data.token
@@ -103,8 +102,8 @@
             }
         },
         created() {
-            const {proxy} = getCurrentInstance()
-            proxy.getCaptcha()
+            // const {proxy} = getCurrentInstance()
+            this.getCaptcha()
         }
     }
 </script>

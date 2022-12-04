@@ -3,6 +3,7 @@ package com.service.register.controller;
 import com.service.register.entity.RegisterPersonnel;
 import com.service.register.utils.RedisCache;
 import com.service.register.utils.Result;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.stereotype.Controller;
@@ -17,8 +18,10 @@ import javax.annotation.Resource;
  * @author hjl
  * @since 2022-11-17
  */
+@CrossOrigin
 @RestController
-@RequestMapping("/register/registerPersonnel")
+@RequestMapping("/registerPersonnel")
+@Slf4j
 public class RegisterPersonnelController extends BaseController {
     @Resource
     RedisCache redisCache;
@@ -33,8 +36,8 @@ public class RegisterPersonnelController extends BaseController {
     }
 
     @PostMapping("/inRegister")
-    public Result inRegister(@RequestBody RegisterPersonnel registerPersonnel) {
-
+    public Result inRegister(RegisterPersonnel registerPersonnel) {
+        log.info("报名提交:" + registerPersonnel.toString());
         //日志操作
         return Result.success(registerPersonnel);
     }

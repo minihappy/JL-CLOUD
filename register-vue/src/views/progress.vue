@@ -72,7 +72,7 @@
         },
         methods: {//方法区
             getCaptcha() {
-                this.$axios.get('/captcha').then(res => {
+                this.$axios.get('/register/captcha').then(res => {
                     this.captchaImg = res.data.data.captcha
                     this.inRegisterForm.code = ''
                 })

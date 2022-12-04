@@ -2,9 +2,7 @@ package com.service.source.utils;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 
-/**
- * @Author 三更  B站： https://space.bilibili.com/663528522
- */
+
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ResponseResult<T> {
     /**
@@ -38,11 +36,11 @@ public class ResponseResult<T> {
         this.code = code;
     }
 
-    public String getmessage() {
+    public String getMessage() {
         return message;
     }
 
-    public void setmessage(String message) {
+    public void getMessage(String message) {
         this.message = message;
     }
 

@@ -7,7 +7,7 @@
         </el-aside>
         <el-container>
             <el-header>
-                <strong>后台管理</strong>
+                <strong>SpringCloud后台管理</strong>
 
                 <div class="header-avatar">
 
@@ -26,13 +26,13 @@
                     </el-dropdown>
 
                     <!--                    <el-link href="https://markerhub.com" target="_blank">网站</el-link>-->
-                    <el-link href="https://space.bilibili.com/13491144" target="_blank">B站</el-link>
+                    <el-link href="https://github.com/minihappy/JL-CLOUD" target="_blank">miniHappy</el-link>
                 </div>
 
             </el-header>
-            <el-main>
+            <el-main style="overflow: hidden">
                 <Tabs></Tabs>
-                <div style="margin: 0 15px;">
+                <div style="margin: 0 15px;height: 95%;overflow: auto;">
                     <router-view/>
                 </div>
             </el-main>
@@ -101,7 +101,8 @@
     }
 
     .el-header {
-        background-color: #17B3A3;
+        margin: 1px 0px;
+        background-color: #f9f9f9;
         color: #333;
         text-align: center;
         line-height: 60px;

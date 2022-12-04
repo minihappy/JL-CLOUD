@@ -40,8 +40,6 @@
 </template>
 
 <script>
-    import qs from 'qs'
-
     export default {
         name: "register",
         watch: {//监听改变
@@ -113,7 +111,11 @@
             }
         },
         created() {
-            this.inRegisterForm = this.$route.query
+            if (!(JSON.stringify(this.$route.query) === "{}")) {
+                this.inRegisterForm = this.$route.query
+            } else {
+                this.$router.push("/")
+            }
         },
 
     }

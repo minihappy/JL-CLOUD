@@ -26,7 +26,23 @@
                 }
 
             }
-        }
+        },
+        // provide() {//将当前的reload作为组件提供去内部页面，inject:['reload']
+        //     reload:this.reload()
+        // },
+        // data() {
+        //     return {
+        //         isRouterAlive: true
+        //     }
+        // },
+        // methods: {
+        //     reload() {
+        //         this.isRouterAlive = false
+        //         this.$nextTick(function () {
+        //             this.isRouterAlive = true
+        //         })
+        //     }
+        // }
     }
 </script>
 
@@ -37,6 +53,6 @@
         -moz-osx-font-smoothing: grayscale;
         text-align: center;
         color: #2c3e50;
-        margin-top: 60px;
+        /*margin-top: 60px;*/
     }
 </style>
