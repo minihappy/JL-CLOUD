@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/RegisterNaCos/pom.xml" />
-        <option value="$PROJECT_DIR$/RegisterServiceNaCos/pom.xml" />
-        <option value="$PROJECT_DIR$/SignupsServiceNaCos/pom.xml" />
-        <option value="$PROJECT_DIR$/MisServiceNaCos/pom.xml" />
-        <option value="$PROJECT_DIR$/AuthorityService/pom.xml" />
-        <option value="$PROJECT_DIR$/AuthoricationServer/pom.xml" />
-        <option value="$PROJECT_DIR$/官方oauth2认证例子/messages-client/pom.xml" />
-        <option value="$PROJECT_DIR$/官方oauth2认证例子/messages-resource/pom.xml" />
-        <option value="$PROJECT_DIR$/官方oauth2认证例子/federated-identity-authorizationserver/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/out" />
-  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_18" default="true" project-jdk-name="18" project-jdk-type="JavaSDK" />
 </project>

@@ -1,148 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AutoImportSettings">
-    <option name="autoReloadType" value="ALL" />
+    <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dabca00-b8a3-40eb-9c26-7f4269012478" name="Default Changelist" comment="oauth2">
-      <change beforePath="$PROJECT_DIR$/AuthorizationServer/src/main/java/com/authorization/service/config/AuthorizationServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthorizationServer/src/main/java/com/authorization/service/config/AuthorizationServerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sys-Source/src/main/java/com/service/source/config/ResourceServerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/Sys-Source/src/main/java/com/service/source/config/ResourceServerConfiguration.java" afterDir="false" />
+    <list default="true" id="865d4888-ce03-4cbf-9be9-e246a59179b7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/$CACHE_FILE$" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthorizationServer/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthorizationServer/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CompilerWorkspaceConfiguration">
-    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
-  </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="user_registration@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-    </expand>
-    <select />
-  </component>
-  <component name="ExternalProjectsData">
-    <projectState path="$PROJECT_DIR$/federated-identity-authorizationserver">
-      <ProjectState />
-    </projectState>
-    <projectState path="$PROJECT_DIR$/messages-client">
-      <ProjectState />
-    </projectState>
-    <projectState path="$PROJECT_DIR$/messages-resource">
-      <ProjectState />
-    </projectState>
-  </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <task path="$PROJECT_DIR$/federated-identity-authorizationserver">
-          <activation />
-        </task>
-        <task path="$PROJECT_DIR$/messages-client">
-          <activation />
-        </task>
-        <task path="$PROJECT_DIR$/messages-resource">
-          <activation />
-        </task>
-        <projects_view>
-          <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="federated-identity-authorizationserver" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="federated-identity-authorizationserver" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="federated-identity-authorizationserver" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build setup" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="federated-identity-authorizationserver" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="help" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="messages-client" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="messages-client" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="messages-client" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build setup" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="messages-resource" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="messages-resource" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="messages-resource" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build setup" type="c8890929:TasksNode$1" />
-              </path>
-            </expand>
-            <select />
-          </tree_state>
-        </projects_view>
-      </state>
-    </system>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="package.json" />
-        <option value="Vue Single File Component" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="updatebranch" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="hiddenUrls">
-      <set>
-        <option value="https://github.com/minihappy/JL-CLOUD.git" />
-      </set>
-    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -152,103 +40,43 @@
       <MavenGeneralSettings>
         <option name="localRepository" value="E:\maven\repository" />
         <option name="mavenHome" value="$PROJECT_DIR$/../../maven/apache-maven-3.9.0" />
-        <option name="userSettingsFile" value="E:\maven\apache-maven-3.9.0\conf\settings.xml" />
+        <option name="useMavenConfig" value="true" />
+        <option name="userSettingsFile" value="E:\maven\settings.xml" />
       </MavenGeneralSettings>
-    </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="jdkForImporter" value="1.8" />
-        <option name="vmOptionsForImporter" value="-Xmx768m" />
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
     </option>
   </component>
   <component name="MavenRunner">
-    <option name="skipTests" value="true" />
+    <option name="jreName" value="1.8" />
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
-  </component>
-  <component name="ProjectId" id="2D1J9KtE42CRaVINUAKeey2IZyy" />
+  <component name="ProjectId" id="2MdITN34YgGXq5Zi2TzhTsvEwKk" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/GitHubProject/xuxiaowei-cloud&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.3827265&quot;,
-    &quot;settings.build.tools.auto.reload&quot;: &quot;ALL&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.build&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;c094b4b71d6505b1f48c65e47c0a841e&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;E:\\IntelliJ IDEA 2022.3.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "E:/SpringProject/JL-Cloud",
+    "settings.editor.selected.configurable": "project.propVCSSupport.Confirmation",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="ReactorSettings">
-    <option name="notificationShown" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.service.auth.config.auth" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\SpringProject\JL-Cloud\messages-client" />
-      <recent name="E:\SpringProject\JL-Cloud\messages-resource" />
-      <recent name="E:\SpringProject\JL-Cloud\federated-identity-authorizationserver" />
-      <recent name="E:\SpringProject\JL-Cloud" />
-      <recent name="E:\SpringProject\JL-Cloud\GatewayServer\src\main\java\com\gateway\service" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\SpringProject\JL-Cloud\AuthorizationServer\src\main\java\com\authorization\service\contorller" />
-      <recent name="E:\SpringProject\JL-Cloud\Sys-Source\src\main\java\com\service\source\config\rabbit\consumer" />
-      <recent name="E:\SpringProject\JL-Cloud\Register\src\main\java\com\service\register" />
-      <recent name="E:\SpringProject\JL-Cloud\System\src\test\java\com\service\mis" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com" />
-      <recent name="" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.authorization.service.utils" />
-      <recent name="com.authorization.service.config" />
-      <recent name="com.authorization.service.properties" />
-      <recent name="com.authorization.service.contorller" />
-      <recent name="com.authorization.service.handle" />
-    </key>
-  </component>
+}]]></component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
         <option value="SpringBootApplicationConfigurationType" />
-        <option value="js.build_tools.npm" />
       </set>
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.AuthorizationServerApplication">
     <configuration default="true" type="JetRunConfigurationType">
-      <module name="Common" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="Common" />
       <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -261,325 +89,56 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthorizationServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="AuthorizationServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="authorizationServer" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.authorization.service.AuthorizationServerApplication" />
-      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.authorization.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CommonApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="CommonApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="common" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.service.common.CommonApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GatewayServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="GatewayServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="gatewayServer" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.gateway.service.GatewayServerApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.gateway.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegisterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+    <configuration name="RegisterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="register" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.service.register.RegisterApplication" />
-      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SysSourceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="SysSourceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="sys-source" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.service.source.SysSourceApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.service.source.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="serve" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/vue/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="serve" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="npm.serve" />
-      <item itemvalue="Spring Boot.AuthApplication" />
-      <item itemvalue="Spring Boot.RegisterApplication" />
-      <item itemvalue="Spring Boot.CommonApplication" />
-      <item itemvalue="Spring Boot.AuthorizationServerApplication" />
-      <item itemvalue="Spring Boot.GatewayServerApplication" />
-      <item itemvalue="Spring Boot.SysSourceApplication" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Spring Boot.SysSourceApplication" />
-        <item itemvalue="Spring Boot.AuthorizationServerApplication" />
-        <item itemvalue="Spring Boot.GatewayServerApplication" />
-        <item itemvalue="npm.serve" />
-      </list>
-    </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <option name="contentProportion" value="0.20522161" />
-          <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="npm" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Not Started" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-            </expand>
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="SpringBeansView">
-    <option name="beanDetailsProportion" value="0.3" />
-  </component>
-  <component name="SshConsoleOptionsProvider">
-    <option name="myEncoding" value="UTF-8" />
-  </component>
-  <component name="StructureViewFactory">
-    <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
-    <option name="ACTIVE_ACTIONS" value=",SHOW_INHERITED,SHOW_FIELDS,SHOW_INTERFACES" />
-  </component>
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2dabca00-b8a3-40eb-9c26-7f4269012478" name="Default Changelist" comment="" />
-      <created>1659860504439</created>
+      <changelist id="865d4888-ce03-4cbf-9be9-e246a59179b7" name="Changes" comment="" />
+      <created>1678091043851</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1659860504439</updated>
-      <workItem from="1659860516775" duration="28978000" />
-      <workItem from="1660204160726" duration="2532000" />
-      <workItem from="1660255629100" duration="2719000" />
-      <workItem from="1660258480140" duration="791000" />
-      <workItem from="1660259351532" duration="770000" />
-      <workItem from="1660291875009" duration="2931000" />
-      <workItem from="1660295913152" duration="2183000" />
-      <workItem from="1660305480914" duration="898000" />
-      <workItem from="1660615033683" duration="2441000" />
-      <workItem from="1660638197886" duration="23006000" />
-      <workItem from="1660830720321" duration="231000" />
-      <workItem from="1660831027855" duration="2763000" />
-      <workItem from="1660834050177" duration="4097000" />
-      <workItem from="1660874995548" duration="12040000" />
-      <workItem from="1661221719876" duration="11570000" />
-      <workItem from="1661260265549" duration="1947000" />
-      <workItem from="1661326699464" duration="3986000" />
-      <workItem from="1661333550917" duration="438000" />
-      <workItem from="1661334471029" duration="589000" />
-      <workItem from="1661341930771" duration="3753000" />
-      <workItem from="1661346557299" duration="598000" />
-      <workItem from="1661352266141" duration="663000" />
-      <workItem from="1661353729136" duration="9280000" />
-      <workItem from="1661674383064" duration="588000" />
-      <workItem from="1661831933144" duration="586000" />
-      <workItem from="1661855702523" duration="590000" />
-      <workItem from="1661860259735" duration="590000" />
-      <workItem from="1661913394911" duration="596000" />
-      <workItem from="1661998737424" duration="3751000" />
-      <workItem from="1662268130276" duration="584000" />
-      <workItem from="1662347902768" duration="3495000" />
-      <workItem from="1662430293544" duration="13136000" />
-      <workItem from="1662520467425" duration="3132000" />
-      <workItem from="1663045855189" duration="599000" />
-      <workItem from="1663466214860" duration="593000" />
-      <workItem from="1663471536400" duration="632000" />
-      <workItem from="1663557995661" duration="594000" />
-      <workItem from="1663641558466" duration="15807000" />
-      <workItem from="1663726931736" duration="1197000" />
-      <workItem from="1663815572340" duration="12277000" />
-      <workItem from="1663899421473" duration="7841000" />
-      <workItem from="1663983022077" duration="15387000" />
-      <workItem from="1664249639615" duration="2743000" />
-      <workItem from="1664259484623" duration="2790000" />
-      <workItem from="1664334300802" duration="19479000" />
-      <workItem from="1664429140573" duration="13010000" />
-      <workItem from="1664527199950" duration="2584000" />
-      <workItem from="1664542589834" duration="3840000" />
-      <workItem from="1664592626519" duration="3757000" />
-      <workItem from="1664615724981" duration="2230000" />
-      <workItem from="1664943636363" duration="32820000" />
-      <workItem from="1665288516297" duration="579000" />
-      <workItem from="1665289508319" duration="3292000" />
-      <workItem from="1665293647319" duration="5111000" />
-      <workItem from="1665298854735" duration="9443000" />
-      <workItem from="1665367019060" duration="17342000" />
-      <workItem from="1665454820138" duration="3322000" />
-      <workItem from="1665712185264" duration="18779000" />
-      <workItem from="1665806909485" duration="432000" />
-      <workItem from="1665890595134" duration="177678000" />
-      <workItem from="1666577376644" duration="66140000" />
-      <workItem from="1666755863272" duration="19596000" />
-      <workItem from="1666838163242" duration="3107000" />
-      <workItem from="1666841984070" duration="15211000" />
-      <workItem from="1666921541970" duration="12613000" />
-      <workItem from="1667016470177" duration="598000" />
-      <workItem from="1667182903463" duration="1105000" />
-      <workItem from="1667788106339" duration="81222000" />
-      <workItem from="1668043912409" duration="42030000" />
-      <workItem from="1668339716253" duration="10735000" />
-      <workItem from="1668498967315" duration="13216000" />
-      <workItem from="1668580660037" duration="9844000" />
-      <workItem from="1668591230927" duration="386000" />
-      <workItem from="1668591635862" duration="2794000" />
-      <workItem from="1668594454961" duration="3131000" />
-      <workItem from="1668605931034" duration="1672000" />
-      <workItem from="1668607619046" duration="785000" />
-      <workItem from="1668608424976" duration="6351000" />
-      <workItem from="1668646040246" duration="31713000" />
-      <workItem from="1668734932420" duration="18045000" />
-      <workItem from="1668784324979" duration="584000" />
-      <workItem from="1668835065363" duration="39593000" />
-      <workItem from="1668916944397" duration="1139000" />
-      <workItem from="1668925836977" duration="12226000" />
-      <workItem from="1669002500932" duration="14408000" />
-      <workItem from="1669091662220" duration="3740000" />
-      <workItem from="1669167144522" duration="5638000" />
-      <workItem from="1669172841612" duration="26056000" />
-      <workItem from="1669266647375" duration="887000" />
-      <workItem from="1669267586670" duration="7794000" />
-      <workItem from="1669297344210" duration="3997000" />
-      <workItem from="1669344908135" duration="19195000" />
-      <workItem from="1669419008741" duration="4336000" />
-      <workItem from="1669526818183" duration="25148000" />
-      <workItem from="1669609372690" duration="28437000" />
-      <workItem from="1669693254673" duration="35313000" />
-      <workItem from="1669781218604" duration="34082000" />
-      <workItem from="1669866116963" duration="149000" />
-      <workItem from="1669866311409" duration="19800000" />
-      <workItem from="1669934115270" duration="4024000" />
-      <workItem from="1669950603560" duration="26515000" />
-      <workItem from="1670042302412" duration="28369000" />
-      <workItem from="1670112938907" duration="48836000" />
-      <workItem from="1670222207001" duration="19666000" />
-      <workItem from="1670252332386" duration="47807000" />
-      <workItem from="1670393365861" duration="16793000" />
-      <workItem from="1670476475028" duration="19064000" />
-      <workItem from="1670504096593" duration="563000" />
-      <workItem from="1670504925487" duration="19586000" />
-      <workItem from="1670564739997" duration="30197000" />
-      <workItem from="1670914773564" duration="11394000" />
-      <workItem from="1670987031706" duration="4209000" />
-      <workItem from="1670991325182" duration="7615000" />
-      <workItem from="1671266310206" duration="2885000" />
-      <workItem from="1674928089182" duration="2829000" />
-      <workItem from="1675153436549" duration="1184000" />
-      <workItem from="1675751835114" duration="18082000" />
-      <workItem from="1675837444633" duration="8429000" />
-      <workItem from="1676009230780" duration="630000" />
-      <workItem from="1676105035034" duration="582000" />
-      <workItem from="1676239780741" duration="789000" />
-      <workItem from="1676380325060" duration="509000" />
-      <workItem from="1676438846082" duration="1868000" />
-      <workItem from="1676510797684" duration="3453000" />
-      <workItem from="1676516455119" duration="637000" />
-      <workItem from="1676518065923" duration="10893000" />
-      <workItem from="1676549916565" duration="424000" />
-      <workItem from="1676550510049" duration="2217000" />
-      <workItem from="1676612105223" duration="13124000" />
-      <workItem from="1676788264760" duration="7933000" />
-      <workItem from="1676874549309" duration="4926000" />
-      <workItem from="1676966051102" duration="6553000" />
-      <workItem from="1677142525472" duration="1185000" />
-      <workItem from="1677171395515" duration="3249000" />
-      <workItem from="1677322018428" duration="11705000" />
-      <workItem from="1677393027063" duration="5496000" />
-      <workItem from="1677476795449" duration="12874000" />
-      <workItem from="1677515833365" duration="1158000" />
-      <workItem from="1677540234607" duration="580000" />
-      <workItem from="1677545452889" duration="2515000" />
-      <workItem from="1677550371183" duration="1094000" />
-      <workItem from="1677572713776" duration="1155000" />
-      <workItem from="1677574896573" duration="2220000" />
-      <workItem from="1677578673931" duration="13694000" />
-      <workItem from="1677612762919" duration="536000" />
-      <workItem from="1677654208406" duration="19686000" />
-      <workItem from="1677684913320" duration="12598000" />
-      <workItem from="1677727465302" duration="23246000" />
-      <workItem from="1677826623620" duration="6800000" />
-      <workItem from="1677834673449" duration="13851000" />
-      <workItem from="1677904218804" duration="1916000" />
-      <workItem from="1677906168016" duration="2375000" />
-      <workItem from="1677908600686" duration="549000" />
-      <workItem from="1677909165218" duration="323000" />
-      <workItem from="1677913127492" duration="7829000" />
-      <workItem from="1677921680000" duration="1960000" />
-      <workItem from="1677957336997" duration="787000" />
-      <workItem from="1677958270746" duration="1937000" />
-      <workItem from="1677960227301" duration="3960000" />
-      <workItem from="1678034111099" duration="4845000" />
-      <workItem from="1678043276135" duration="75000" />
-      <workItem from="1678043370222" duration="3927000" />
-      <workItem from="1678076702172" duration="1245000" />
-      <workItem from="1678085612603" duration="1355000" />
+      <updated>1678091043851</updated>
+      <workItem from="1678091045145" duration="319000" />
     </task>
-    <task id="LOCAL-00001" summary="oauth2">
-      <created>1678086705514</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1678086705514</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.History.Properties">
-    <option name="COLUMN_ORDER">
-      <list>
-        <option value="0" />
-        <option value="2" />
-        <option value="3" />
-        <option value="1" />
-      </list>
-    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -593,338 +152,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="oauth2" />
-    <option name="LAST_COMMIT_MESSAGE" value="oauth2" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Sign-up/src/main/java/com/service/signups/controller/SignUpController.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Register/src/main/java/com/service/register/controller/RegisterController.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Authorization/src/main/java/com/service/auth/controller/UserController.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Authorization/src/main/java/com/service/auth/handler/RestAuthenticationEntryPoint.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="62" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Authorization/src/main/java/com/service/auth/handler/RestfulAccessDeniedHandler.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="63" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Authorization/src/main/java/com/service/auth/utils/JwtUtil.java</url>
-          <line>119</line>
-          <option name="timeStamp" value="161" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Authorization/src/main/java/com/service/auth/utils/JwtUtil.java</url>
-          <line>117</line>
-          <option name="timeStamp" value="162" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Authorization/src/main/java/com/service/auth/utils/JwtUtil.java</url>
-          <line>95</line>
-          <option name="timeStamp" value="176" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Authorization/src/main/java/com/service/auth/utils/JwtUtil.java</url>
-          <line>86</line>
-          <option name="timeStamp" value="177" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Authorization/src/main/java/com/service/auth/controller/index.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="181" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Authorization/src/main/java/com/service/auth/controller/KeyPairController.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="215" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-oauth2-jose/5.7.1/spring-security-oauth2-jose-5.7.1.jar!/org/springframework/security/oauth2/jwt/NimbusReactiveJwtDecoder.class</url>
-          <line>226</line>
-          <option name="timeStamp" value="230" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-oauth2-jose/5.7.1/spring-security-oauth2-jose-5.7.1.jar!/org/springframework/security/oauth2/jwt/NimbusReactiveJwtDecoder.class</url>
-          <line>116</line>
-          <option name="timeStamp" value="232" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-oauth2-jose/5.7.1/spring-security-oauth2-jose-5.7.1.jar!/org/springframework/security/oauth2/jwt/NimbusReactiveJwtDecoder.class</url>
-          <line>109</line>
-          <option name="timeStamp" value="234" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-oauth2-jose/5.7.1/spring-security-oauth2-jose-5.7.1.jar!/org/springframework/security/oauth2/jwt/NimbusReactiveJwtDecoder.class</url>
-          <line>111</line>
-          <option name="timeStamp" value="235" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-oauth2-resource-server/5.7.1/spring-security-oauth2-resource-server-5.7.1.jar!/org/springframework/security/oauth2/server/resource/authentication/JwtAuthenticationToken.class</url>
-          <line>20</line>
-          <option name="timeStamp" value="248" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-oauth2-resource-server/5.7.1/spring-security-oauth2-resource-server-5.7.1.jar!/org/springframework/security/oauth2/server/resource/authentication/JwtAuthenticationToken.class</url>
-          <line>24</line>
-          <option name="timeStamp" value="250" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.3.20/spring-web-5.3.20.jar!/org/springframework/web/server/adapter/DefaultServerWebExchange.class</url>
-          <line>145</line>
-          <option name="timeStamp" value="289" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.3.20/spring-web-5.3.20.jar!/org/springframework/web/server/ServerWebExchangeDecorator.class</url>
-          <line>50</line>
-          <option name="timeStamp" value="292" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.7.1/spring-security-core-5.7.1.jar!/org/springframework/security/core/context/SecurityContextImpl.class</url>
-          <line>18</line>
-          <option name="timeStamp" value="293" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/System/src/main/java/com/service/mis/filter/JwtAuthenticationTokenFilter.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="353" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/System/src/main/java/com/service/mis/handler/AccessDeniedHandlerImpl.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="354" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/System/src/main/java/com/service/mis/handler/AuthenticationEntryPointImpl.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="355" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Authorization/src/main/java/com/service/auth/handler/AuthenticationEntryPointImpl.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="364" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.3.20/spring-web-5.3.20.jar!/org/springframework/web/server/adapter/DefaultServerWebExchange.class</url>
-          <line>215</line>
-          <option name="timeStamp" value="406" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.3.20/spring-web-5.3.20.jar!/org/springframework/web/server/adapter/DefaultServerWebExchange.class</url>
-          <line>231</line>
-          <option name="timeStamp" value="407" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.3.20/spring-web-5.3.20.jar!/org/springframework/web/server/adapter/DefaultServerWebExchange.class</url>
-          <line>230</line>
-          <option name="timeStamp" value="408" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.3.20/spring-web-5.3.20.jar!/org/springframework/web/server/adapter/DefaultServerWebExchange.class</url>
-          <line>270</line>
-          <option name="timeStamp" value="409" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.3.20/spring-web-5.3.20.jar!/org/springframework/web/server/adapter/DefaultServerWebExchange.class</url>
-          <line>278</line>
-          <option name="timeStamp" value="410" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.3.20/spring-web-5.3.20.jar!/org/springframework/web/server/adapter/DefaultServerWebExchange.class</url>
-          <line>292</line>
-          <option name="timeStamp" value="411" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.3.20/spring-web-5.3.20.jar!/org/springframework/web/server/adapter/DefaultServerWebExchange.class</url>
-          <line>296</line>
-          <option name="timeStamp" value="412" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Sys-Source/src/main/java/com/service/source/config/jpa/IgnoreForeignInterceptor.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="413" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Sys-Source/src/main/java/com/service/source/config/jpa/IgnoreForeignDialectResolver.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="414" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.6.9.Final/hibernate-core-5.6.9.Final.jar!/org/hibernate/engine/internal/AbstractEntityEntry.class</url>
-          <line>70</line>
-          <option name="timeStamp" value="531" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.6.9.Final/hibernate-core-5.6.9.Final.jar!/org/hibernate/engine/internal/AbstractEntityEntry.class</url>
-          <line>219</line>
-          <option name="timeStamp" value="534" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.6.9.Final/hibernate-core-5.6.9.Final.jar!/org/hibernate/engine/internal/AbstractEntityEntry.class</url>
-          <line>278</line>
-          <option name="timeStamp" value="535" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.6.9.Final/hibernate-core-5.6.9.Final.jar!/org/hibernate/engine/internal/AbstractEntityEntry.class</url>
-          <line>294</line>
-          <option name="timeStamp" value="536" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Register/src/main/java/com/service/register/config/rabbit/consumer/RabbitMQConsumer.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="548" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Gateway/src/main/java/com/service/gateway/handler/RestfulAccessDeniedHandler.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="591" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Authorization/src/main/java/com/service/auth/config/oauth2/AuthorizationServerConfig.java</url>
-          <line>157</line>
-          <option name="timeStamp" value="625" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-gateway-server/3.1.1/spring-cloud-gateway-server-3.1.1.jar!/org/springframework/cloud/gateway/filter/factory/TokenRelayGatewayFilterFactory.class</url>
-          <line>51</line>
-          <option name="timeStamp" value="627" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-oauth2-client/5.7.5/spring-security-oauth2-client-5.7.5.jar!/org/springframework/security/oauth2/client/userinfo/DefaultReactiveOAuth2UserService.class</url>
-          <line>48</line>
-          <option name="timeStamp" value="689" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/5.7.5/spring-security-config-5.7.5.jar!/org/springframework/security/config/oauth2/client/ClientRegistrationsBeanDefinitionParser.class</url>
-          <line>127</line>
-          <option name="timeStamp" value="699" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/5.7.5/spring-security-config-5.7.5.jar!/org/springframework/security/config/oauth2/client/ClientRegistrationsBeanDefinitionParser.class</url>
-          <line>180</line>
-          <option name="timeStamp" value="700" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/5.7.5/spring-security-config-5.7.5.jar!/org/springframework/security/config/oauth2/client/ClientRegistrationsBeanDefinitionParser.class</url>
-          <line>154</line>
-          <option name="timeStamp" value="701" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/官方oauth2认证例子/messages-client/src/main/java/sample/web/AuthorizationController.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="702" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-oauth2-client/5.7.5/spring-security-oauth2-client-5.7.5.jar!/org/springframework/security/oauth2/client/OAuth2AuthorizedClient.class</url>
-          <line>36</line>
-          <option name="timeStamp" value="703" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-oauth2-client/5.7.5/spring-security-oauth2-client-5.7.5.jar!/org/springframework/security/oauth2/client/OAuth2AuthorizedClient.class</url>
-          <line>26</line>
-          <option name="timeStamp" value="704" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-oauth2-client/5.7.5/spring-security-oauth2-client-5.7.5.jar!/org/springframework/security/oauth2/client/OAuth2AuthorizedClient.class</url>
-          <line>22</line>
-          <option name="timeStamp" value="705" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-oauth2-client/5.7.5/spring-security-oauth2-client-5.7.5.jar!/org/springframework/security/oauth2/client/OAuth2AuthorizedClient.class</url>
-          <line>40</line>
-          <option name="timeStamp" value="706" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-oauth2-client/5.7.5/spring-security-oauth2-client-5.7.5.jar!/org/springframework/security/oauth2/client/OAuth2AuthorizedClient.class</url>
-          <line>44</line>
-          <option name="timeStamp" value="707" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-oauth2-client/5.7.5/spring-security-oauth2-client-5.7.5.jar!/org/springframework/security/oauth2/client/OAuth2AuthorizedClient.class</url>
-          <line>49</line>
-          <option name="timeStamp" value="711" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.7.5/spring-security-web-5.7.5.jar!/org/springframework/security/web/authentication/AuthenticationFilter.class</url>
-          <line>144</line>
-          <option name="timeStamp" value="847" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.7.5/spring-security-web-5.7.5.jar!/org/springframework/security/web/server/authentication/AuthenticationConverterServerWebExchangeMatcher.class</url>
-          <line>22</line>
-          <option name="timeStamp" value="848" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-oauth2-client/5.7.5/spring-security-oauth2-client-5.7.5.jar!/org/springframework/security/oauth2/client/web/server/OAuth2AuthorizationCodeGrantWebFilter.class</url>
-          <line>147</line>
-          <option name="timeStamp" value="849" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.7.5/spring-security-web-5.7.5.jar!/org/springframework/security/web/server/authorization/DelegatingReactiveAuthorizationManager.class</url>
-          <line>35</line>
-          <option name="timeStamp" value="869" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.7.5/spring-security-web-5.7.5.jar!/org/springframework/security/web/server/authorization/AuthorizationWebFilter.class</url>
-          <line>29</line>
-          <option name="timeStamp" value="870" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.7.5/spring-security-web-5.7.5.jar!/org/springframework/security/web/server/authorization/AuthorizationWebFilter.class</url>
-          <line>31</line>
-          <option name="timeStamp" value="871" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.7.5/spring-security-web-5.7.5.jar!/org/springframework/security/web/server/authorization/AuthorizationWebFilter.class</url>
-          <line>28</line>
-          <option name="timeStamp" value="872" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/AuthorizationServer/src/main/java/com/authorization/service/config/OAuth2AuthorizationServiceReactiveJwtAuthenticationConverter.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="898" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Sys-Source/src/main/java/com/service/source/contorller/sys/SysAuthorityController.java</url>
-          <line>66</line>
-          <option name="timeStamp" value="904" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-    <pin-to-top-manager>
-      <pinned-members>
-        <PinnedItemInfo parentTag="org.springframework.security.web.server.util.matcher.OrServerWebExchangeMatcher" memberName="matchers" />
-        <PinnedItemInfo parentTag="org.springframework.security.web.firewall.StrictHttpFirewall$StrictFirewalledRequest" memberName="request" />
-        <PinnedItemInfo parentTag="org.springframework.security.oauth2.server.authorization.settings.AuthorizationServerSettings" memberName="settings" />
-        <PinnedItemInfo parentTag="com.gateway.service.Authorization.AuthorizationManager" memberName="redisTemplate" />
-        <PinnedItemInfo parentTag="org.springframework.security.web.server.authentication.AuthenticationWebFilter" memberName="authenticationConverter" />
-        <PinnedItemInfo parentTag="org.springframework.http.server.DefaultPathContainer" memberName="path" />
-        <PinnedItemInfo parentTag="reactor.core.publisher.MonoFlatMap" memberName="source" />
-        <PinnedItemInfo parentTag="org.springframework.security.web.server.util.matcher.ServerWebExchangeMatcherEntry" memberName="entry" />
-        <PinnedItemInfo parentTag="org.springframework.security.oauth2.jwt.Jwt" memberName="expiresAt" />
-        <PinnedItemInfo parentTag="reactor.core.publisher.MonoFilterFuseable" memberName="source" />
-        <PinnedItemInfo parentTag="org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationToken" memberName="principal" />
-        <PinnedItemInfo parentTag="org.springframework.data.redis.serializer.JdkSerializationRedisSerializer" memberName="deserializer" />
-      </pinned-members>
-    </pin-to-top-manager>
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
+    <option name="SHOW_DIRTY_RECURSIVELY" value="true" />
   </component>
 </project>
