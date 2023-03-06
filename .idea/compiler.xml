@@ -13,7 +13,6 @@
         <module name="authorizationServer" />
         <module name="gatewayServer" />
         <module name="sys-source" />
-        <module name="gateway" />
         <module name="register" />
       </profile>
     </annotationProcessing>
