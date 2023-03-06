@@ -1,0 +1,65 @@
+server:
+  port: 9000
+spring:
+  redis:
+    database: 0
+    port: 6379
+    host: localhost
+    password:
+  application:
+    name: authorizationServer
+  datasource:
+    initialization-mode=always:
+    url: jdbc:mysql://localhost:3306/mytestdb?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+#  security:
+#    oauth2:
+#      client:
+#        registration:
+#          google-idp:
+#            provider: google
+#            client-id: ${GOOGLE_CLIENT_ID:google-client-id}
+#            client-secret: ${GOOGLE_CLIENT_SECRET:google-client-secret}
+#            scope: openid, https://www.googleapis.com/auth/userinfo.profile, https://www.googleapis.com/auth/userinfo.email
+#            client-name: Sign in with Google
+#          github-idp:
+#            provider: github
+#            client-id: ${GITHUB_CLIENT_ID:github-client-id}
+#            client-secret: ${GITHUB_CLIENT_SECRET:github-client-secret}
+#            scope: user:email, read:user
+#            client-name: Sign in with GitHub
+#        provider:
+#          google:
+#            user-name-attribute: email
+#          github:
+#            user-name-attribute: login
+# 客户端 配置
+cloud:
+  security:
+    # 启动RSA密码加密
+    enabled-rsa: false
+    passport-domain: http://hjl.server.cloud:8080/index
+  client:
+    client-id: messaging-client
+    client-secret: secret
+    authorize-uri: http://gateway.server.cloud:9201/api/oauth2/authorize
+    check-token-uri: http://gateway.server.cloud:9201/api/oauth2/check_token?token=
+    redirect-uri: http://gateway.server.cloud:9201/api/code
+    consent-page: http://gateway.server.cloud:9201/api/oauth2.1/authorize
+    access-token-uri: http://gateway.server.cloud:9201/api/oauth2/token
+    scope: message.read
+    state-name: STATE_NAME
+    home-page: http://hjl.server.cloud:8080
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    org.springframework.security: DEBUG
+    org.springframework.security.oauth2: DEBUG
+    org.springframework.boot.autoconfigure: DEBUG

@@ -33,31 +33,33 @@ module.exports = defineConfig({
     productionSourceMap: false,
     //
     // // 它支持webPack-dev-server的所有选项
-    // devServer: {
-    //     host:"localhost",
-    //     https:false,
-    //     //端口号
-    //     port: 8080,
-    //     //自动打开浏览器
-    //     open: true,
-    //     // 配置代理
-    //     proxy: {
-    //         [process.env.VUE_APP_BASE_API]: {
-    //             target: process.env.VUE_APP_REQUEST_URL,//真正请求地址
-    //             // 是否改变域名
-    //             changeOrigin: true,
-    //             // 代理websockets
-    //             ws: true,
-    //             // 路径重写
-    //             pathRewrite: {  // pathRewrite的作用是将 process.env.VUE_APP_BASE_API 进行替换,如果接口中没有 process.env.VUE_APP_BASE_API，那就替换成 '' ,
-    //                 //  如果接口中需要 process.env.VUE_APP_BASE_API， 那么就需要写成 ['^'+process.env.VUE_APP_BASE_API]: process.env.VUE_APP_BASE_API，可以理解成为一个重定向或者重新赋值的作用，
-    //                 /**
-    //                  * 注意：一般项目有统一的访问名称：如api,此时需要路径重写为如下，相当于代理为：http://localhost:8082/api,如果请求
-    //                  * 路径为：http://localhost:8082，那么就不需要重写代理名，或者写为："/api": "/"
-    //                  */
-    //                 ['^'+process.env.VUE_APP_BASE_API]: process.env.VUE_APP_BASE_API
-    //             },
-    //         },
-    //     },
-    // },
+    devServer: {
+        historyApiFallback: false,
+        allowedHosts: "all",
+        //     host:"localhost",
+        //     https:false,
+        //     //端口号
+        //     port: 8080,
+        //     //自动打开浏览器
+        //     open: true,
+        //     // 配置代理
+        //     proxy: {
+        //         [process.env.VUE_APP_BASE_API]: {
+        //             target: process.env.VUE_APP_REQUEST_URL,//真正请求地址
+        //             // 是否改变域名
+        //             changeOrigin: true,
+        //             // 代理websockets
+        //             ws: true,
+        //             // 路径重写
+        //             pathRewrite: {  // pathRewrite的作用是将 process.env.VUE_APP_BASE_API 进行替换,如果接口中没有 process.env.VUE_APP_BASE_API，那就替换成 '' ,
+        //                 //  如果接口中需要 process.env.VUE_APP_BASE_API， 那么就需要写成 ['^'+process.env.VUE_APP_BASE_API]: process.env.VUE_APP_BASE_API，可以理解成为一个重定向或者重新赋值的作用，
+        //                 /**
+        //                  * 注意：一般项目有统一的访问名称：如api,此时需要路径重写为如下，相当于代理为：http://localhost:8082/api,如果请求
+        //                  * 路径为：http://localhost:8082，那么就不需要重写代理名，或者写为："/api": "/"
+        //                  */
+        //                 ['^'+process.env.VUE_APP_BASE_API]: process.env.VUE_APP_BASE_API
+        //             },
+        //         },
+        //     },
+    },
 })

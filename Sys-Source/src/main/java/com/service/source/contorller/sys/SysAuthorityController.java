@@ -17,6 +17,7 @@ import com.service.source.utils.ResponseResult;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.util.StringUtils;
 import org.springframework.validation.annotation.Validated;
@@ -61,7 +62,8 @@ public class SysAuthorityController {
 
     @SneakyThrows
     @GetMapping("/nav")
-    public ResponseResult nav(HttpServletRequest request) {
+    public ResponseResult nav(HttpServletRequest request, Authentication authentication) {
+        System.out.println(authentication);
         Object object = getUserInfo(request);
         if (object instanceof ResponseResult) {
             return (ResponseResult) object;

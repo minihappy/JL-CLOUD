@@ -1,0 +1,123 @@
+server:
+  port: 9201
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: DEBUG
+    org.springframework.security: DEBUG
+    org.springframework.security.oauth2: DEBUG
+    org.springframework.cloud.gateway: DEBUG
+#    org.springframework.boot.autoconfigure: DEBUG
+
+spring:
+  datasource:
+    initialization-mode=always:
+    url: jdbc:mysql://localhost:3306/user_registration?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  application:
+    name: GatewayServer
+  thymeleaf:
+    cache: false
+  security:
+    oauth2:
+      client:
+        registration:
+          messaging-client-oidc:
+            provider: spring
+            client-id: messaging-client
+            client-secret: secret
+            authorization-grant-type: authorization_code
+            redirect-uri: "http://gateway.server.cloud:9201/api/login/oauth2/code/{registrationId}"
+            scope: openid, profile
+            client-name: messaging-client-oidc
+          messaging-client-authorization-code:
+            provider: spring
+            client-id: messaging-client
+            client-secret: secret
+            authorization-grant-type: authorization_code
+            redirect-uri: "http://gateway.server.cloud:9201/api/oauth2/authorize"
+            scope: message.read,message.write
+            client-name: messaging-client-authorization-code
+        provider:
+          spring:
+            issuer-uri: http://auth.server.cloud:9000
+      #            jwk-set-uri: "http://127.0.0.1:9000/rsa/publicKey"
+      resourceserver:
+        jwt:
+          issuer-uri: http://auth.server.cloud:9000
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin,RETAIN_UNIQUE
+      globalcors:
+        cors-configurations:
+          '[/**]': # 匹配所有请求
+            #            allowedOrigins: "*" #跨域处理 允许所有的域
+            allowedMethods: # 允许的跨域ajakzx的请求方式
+              - "GET"
+              - "POST"
+              - "DELETE"
+              - "PUT"
+              - "OPTIONS"
+            allowedOriginPatterns: "*" # 允许跨域的地址
+            allowedHeaders: "*"# 允许在请求中携带的头信息
+            allowCredentials: false # 是否允许携带cookie
+            maxAge: 360000 # 这次跨域检测的有效期
+      routes: #配置路由路径
+        - id: system
+          uri: lb://SysSource
+          predicates:
+            - Path=/sys-comm/**
+          filters:
+            - StripPrefix=1
+        - id: auth
+          uri: lb://authorizationServer
+          predicates:
+            - Path=/api/**
+          filters:
+            - StripPrefix=1
+        - id: register
+          uri: lb://Register
+          predicates:
+            - Path=/register/**
+          filters:
+            - StripPrefix=1
+      discovery:
+        locator:
+          enabled: true #开启从注册中心动态创建路由的功能
+          lower-case-service-id: true #使用小写服务名，默认是大写
+#  main:
+#    web-application-type: reactive
+cors:
+  request:
+    urls:
+      - "/oauth2/authorize"
+#messages:
+#  base-uri: http://gateway.server.cloud:9201/messages
+
+secure:
+  ignore:
+    urls: #配置白名单路径
+      - "/login"
+      - "/user/login"
+      - "/user/logout"
+      - "/captcha"
+      - "/favicon.ico"
+      - "/api/**"
+      - "/code"
+      - "/register/**"
+      - "/oauth/**"
+      - "/oauth2/jwks"
+      - "/oauth2/**"
+      - "/oauth2/code"
+      - "/oauth2/authorize"
+      - "/oauth2/token"
+      - "/authorize/**"
+      - "/authorized/**"
+

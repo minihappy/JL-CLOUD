@@ -9,8 +9,9 @@
         <module>Register</module><!--报名-->
         <module>Authorization</module><!--授权-->
         <module>Common</module><!--通用-->
-        <module>Gateway</module><!--网关-->
+        <module>GatewayServer</module><!--网关-->
         <module>Sys-Source</module><!--后台-->
+        <module>AuthorizationServer</module><!--后台-->
     </modules>
     <name>JL-cloud</name>
     <packaging>pom</packaging>
@@ -19,17 +20,17 @@
         <maven.compiler.source>1.8</maven.compiler.source>        <!--指定jdk版本-->
         <maven.compiler.target>1.8</maven.compiler.target>        <!--指定jdk版本-->
         <java.version>1.8</java.version>
-        <spring.version>2.7.6</spring.version>
-        <spring.cloud.version>2021.0.1</spring.cloud.version>
-        <spring.cloud.alibaba.version>2021.0.1.0</spring.cloud.alibaba.version>
-<!--        <mybatis.plus.starter.version>3.5.1</mybatis.plus.starter.version>-->
-<!--        <mybatis.plus.generator.version>3.5.2</mybatis.plus.generator.version>-->
+        <spring.version>2.7.9</spring.version>
+        <spring.cloud.version>2021.0.5</spring.cloud.version>
+        <spring.cloud.alibaba.version>2021.0.4.0</spring.cloud.alibaba.version>
+        <!--        <mybatis.plus.starter.version>3.5.1</mybatis.plus.starter.version>-->
+        <!--        <mybatis.plus.generator.version>3.5.2</mybatis.plus.generator.version>-->
     </properties>
     <dependencyManagement>
         <dependencies>
             <dependency> <!-- 通过多个dependency继承spring boot 依赖 -->
                 <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-parent</artifactId>
+                <artifactId>spring-boot-dependencies</artifactId>
                 <version>${spring.version}</version>
                 <type>pom</type>
                 <scope>import</scope><!-->scope主要是为了管理依赖的部署，确定依赖的使用范围。使用scope标签，可以很方便、直观的进行依赖的总体管理。<-->
@@ -50,20 +51,20 @@
                 <type>pom</type>
                 <scope>import</scope><!-->scope主要是为了管理依赖的部署，确定依赖的使用范围。使用scope标签，可以很方便、直观的进行依赖的总体管理。<-->
             </dependency>
-<!--            <dependency>-->
-<!--                <groupId>com.baomidou</groupId>-->
-<!--                <artifactId>mybatis-plus-boot-starter</artifactId>-->
-<!--                <version>${mybatis.plus.starter.version}</version>-->
-<!--                <type>pom</type>-->
-<!--                <scope>import</scope>-->
-<!--            </dependency>-->
-<!--            <dependency>-->
-<!--                <groupId>com.baomidou</groupId>-->
-<!--                <artifactId>mybatis-plus-generator</artifactId>-->
-<!--                <version>${mybatis.plus.generator.version.version}</version>-->
-<!--                <type>pom</type>-->
-<!--                <scope>import</scope>-->
-<!--            </dependency>-->
+            <!--            <dependency>-->
+            <!--                <groupId>com.baomidou</groupId>-->
+            <!--                <artifactId>mybatis-plus-boot-starter</artifactId>-->
+            <!--                <version>${mybatis.plus.starter.version}</version>-->
+            <!--                <type>pom</type>-->
+            <!--                <scope>import</scope>-->
+            <!--            </dependency>-->
+            <!--            <dependency>-->
+            <!--                <groupId>com.baomidou</groupId>-->
+            <!--                <artifactId>mybatis-plus-generator</artifactId>-->
+            <!--                <version>${mybatis.plus.generator.version.version}</version>-->
+            <!--                <type>pom</type>-->
+            <!--                <scope>import</scope>-->
+            <!--            </dependency>-->
         </dependencies>
     </dependencyManagement>
 
@@ -101,14 +102,13 @@
         <!--            <artifactId>spring-cloud-starter-security</artifactId>-->
         <!--            <version>2.2.5.RELEASE</version>-->
         <!--        </dependency>-->
-                <dependency>
-                    <groupId>org.springframework.security</groupId>
-                    <artifactId>spring-security-core</artifactId>
-                </dependency>
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
         </dependency>
         <dependency>
             <groupId>com.service</groupId>
@@ -121,6 +121,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring.version}</version>
             </plugin>
         </plugins>
     </build>

@@ -10,43 +10,31 @@ spring:
       discovery:
         server-addr: localhost:8848
     gateway:
-      #      globalcors: # 全局的跨域处理
-      #        add-to-simple-url-handler-mapping: true # 解决options请求被拦截问题
-      #        corsConfigurations:
-      #          '[/**]':
-      #            allowedOrigins: # 允许哪些网站的跨域请求 allowedOrigins: “*” 允许所有网站
-      #              - "http://localhost:8080"
-      #              - "http://127.0.0.1:8080"
-#      globalcors:
-#        cors-configurations:
-#          '[/**]': # 匹配所有请求
-#            allowedOrigins: "*" #跨域处理 允许所有的域
-#            allowedMethods: # 允许的跨域ajakzx的请求方式
-#              - "GET"
-#              - "POST"
-#              - "DELETE"
-#              - "PUT"
-#              - "OPTIONS"
-#            allowedOriginPatterns: "*" # 允许在请求中携带的头信息
-#            allowCredentials: true # 是否允许携带cookie
-#            maxAge: 360000 # 这次跨域检测的有效期
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin,RETAIN_UNIQUE
+      globalcors:
+        cors-configurations:
+          '[/**]': # 匹配所有请求
+            #            allowedOrigins: "*" #跨域处理 允许所有的域
+            allowedMethods: # 允许的跨域ajakzx的请求方式
+              - "GET"
+              - "POST"
+              - "DELETE"
+              - "PUT"
+              - "OPTIONS"
+            allowedOriginPatterns: "*" # 允许跨域的地址
+            allowedHeaders: "*"# 允许在请求中携带的头信息
+            allowCredentials: false # 是否允许携带cookie
+            maxAge: 360000 # 这次跨域检测的有效期
       routes: #配置路由路径
-        #        - id: oauth2-api-route
-        #          uri: lb://micro-oauth2-api
-        #          predicates:
-        #            - Path=/api/**
-        #          filters:
-        #            - StripPrefix=1
         - id: system
           uri: lb://System
           predicates:
             - Path=/sys-comm/**
           filters:
-            - RewritePath=/sys-comm/(?<segment>.*), /renren-fast/$\{segment}
-            - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
             - StripPrefix=1
         - id: auth
-          uri: lb://Authorization
+          uri: lb://AuthorizationServer
           predicates:
             - Path=/api/**
           filters:
@@ -63,70 +51,10 @@ spring:
           lower-case-service-id: true #使用小写服务名，默认是大写
   security:
     oauth2:
-#      client:
-#        registration:
-#          api-client-oidc:
-#            provider: Authorization
-#            client-id: client-app
-#            client-secret: 123456
-#            authorization-grant-type: authorization_code
-#            redirect-uri: '{baseUrl}/{action}/oauth2/code/{registrationId}'
-#            scope: ADMIN,TEST
-#            client-name: api-client-oidc
-          #            在不受信任的环境中运行时使用代码交换证明密钥（pkce）
-          #  1.client-secret被省略（或为空）
-          #
-          #  2.client-authentication-method设置为“无”（ClientAuthenticationMethod.NONE）
-#          api-client-authorization-code:
-#            provider: Authorization
-#            client-id: client-app
-#            client-secret: 123456
-#            authorization-grant-type: authorization_code
-#            redirect-uri: "{baseUrl}/{action}/authorized"
-#            scope: ADMIN,TEST
-#            client-name: api-client-authorization-code
-#        provider:
-#          # 服务提供地址
-#          Authorization:
-#            issuer-uri: http://auth-server:9000
-      #        registration:
-      #          # 客户端：与注册时保持一致
-      ##          myClient:
-      ##            client-id: client-app
-      ##            client-secret: 123456
-      ##            #client-name: my_client_name
-      ##            scope: read,write
-      ##            authorization-grant-type: authorization_code
-      ##            provider: Authorization
-      ##            redirect-uri: '{baseUrl}/{action}/oauth2/code/{registrationId}'
-      ##            # 认证方法
-      ##            client-authentication-method: client_secret_basic
-      #          client-app:
-      #            provider: Authorization
-      #            client-id: client-app
-      #            client-secret: 123456
-      #            authorization-grant-type: authorization_code
-      #            redirect-uri: '{baseUrl}/{action}/oauth2/code/{registrationId}'
-      #            scope: read,write,openid
-      #            client-name: client-app
-      #        provider:
-      #          # 服务提供地址
-      #          Authorization:
-      #            issuer-uri: http://auth-server:9000
-      #            # issuer-uri 可以简化下面的配置
-      #            # 请求授权码地址
-      ##            authorization-uri: http://auth-server:9000/oauth2/authorize
-      ##            # 请求令牌地址
-      ##            token-uri: http://auth-server:9000/oauth2/token
-      ##            # 用户资源地址
-      ##            user-info-uri: http://auth-server:9000/oauth2/user
-      ##            # 用户资源返回中的一个属性名
-      ##            user-name-attribute: name
-      ##            user-info-authentication-method: GET
       resourceserver:
         jwt:
           issuer-uri: 'http://127.0.0.1:9000'
-          jwk-set-uri: 'http://127.0.0.1:9000/oauth2/jwks' #配置RSA的公钥访问地址
+#          jwk-set-uri: 'http://127.0.0.1:9000/rsa/publicKey' #配置RSA的公钥访问地址
   redis:
     database: 0
     port: 6379

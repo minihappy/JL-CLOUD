@@ -7,34 +7,36 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="register" />
-        <module name="gateway" />
+        <module name="authorization" />
         <module name="common" />
-        <module name="Common" />
-        <module name="Gateway" />
-        <module name="Oauth-authorization-server" />
-        <module name="Authorization" />
-        <module name="Sys-Source" />
+        <module name="resource" />
+        <module name="authorizationServer" />
+        <module name="gatewayServer" />
+        <module name="sys-source" />
+        <module name="gateway" />
+        <module name="register" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Authorization" target="1.8" />
       <module name="AuthorizationClient" target="1.8" />
+      <module name="AuthorizationServer" target="1.8" />
+      <module name="authorizationserver" target="1.8" />
       <module name="Common" target="1.8" />
-      <module name="common" target="1.8" />
       <module name="Gateway" target="1.8" />
-      <module name="gateway" target="1.8" />
-      <module name="JL-cloud" target="1.8" />
-      <module name="JL-Cloud" target="1.8" />
+      <module name="gateway (1)" target="1.8" />
+      <module name="gateway (2)" target="1.8" />
+      <module name="GatewayServer" target="1.8" />
+      <module name="JL-Cloud" target="1.5" />
       <module name="micro-oauth2-gateway" target="1.8" />
       <module name="Oauth-authorization-server" target="8" />
       <module name="Oauth-resource-server" target="8" />
       <module name="Register" target="1.8" />
-      <module name="register" target="1.8" />
       <module name="register (1) (com.nacos)" target="1.8" />
       <module name="registernacos" target="1.5" />
       <module name="registerServiceNacos" target="1.5" />
       <module name="RegisterServiceNaCos (1)" target="1.5" />
+      <module name="service" target="1.8" />
       <module name="Sign-up" target="1.8" />
       <module name="signup" target="1.5" />
       <module name="signupnacos" target="1.5" />
@@ -47,8 +49,10 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Authorization" options="" />
       <module name="AuthorizationClient" options="" />
+      <module name="AuthorizationServer" options="" />
       <module name="Common" options="" />
       <module name="Gateway" options="" />
+      <module name="GatewayServer" options="" />
       <module name="JL-Cloud" options="" />
       <module name="Oauth-authorization-server" options="-parameters" />
       <module name="Oauth-resource-server" options="-parameters" />
@@ -62,6 +66,7 @@
       <module name="register (1) (com.nacos)" options="-parameters" />
       <module name="registerServiceNacos" options="" />
       <module name="registernacos" options="" />
+      <module name="service" options="" />
       <module name="signup" options="" />
       <module name="signupnacos" options="" />
       <module name="spring-security-client" options="-parameters" />

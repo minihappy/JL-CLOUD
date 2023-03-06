@@ -1,6 +1,5 @@
 import {createRouter, createWebHistory} from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-
 // import Vue from 'vue'
 // import VueRouter from 'vue-router'
 // import HomeView from '../views/HomeView.vue'
@@ -64,6 +63,11 @@ const router = createRouter({
 })
 let registerRouteFresh = true
 router.beforeEach((to, from, next) => {//在路由操作前遍历调用
+    const jwt = to.query.accessToken
+    if (typeof (jwt) == "string" && to.path == "/") {
+        store.commit('SET_TOKEN', jwt)
+        next({path: '/index'})
+    }
     let hasRoute = store.state.menus.hasRoutes
     let token = localStorage.getItem("token")//获取token
     if (to.path == '/') {//判断路由的访问页面

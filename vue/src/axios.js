@@ -6,8 +6,8 @@ import qs from 'qs'
 import store from './store'
 
 const request = axios.create({
-    baseURL: "http://localhost:9201",
-    timeout: 5000,
+    baseURL: "http://gateway.server.cloud:9201",
+    timeout: 10000,
 })
 // components:{
 // 	ElMessage

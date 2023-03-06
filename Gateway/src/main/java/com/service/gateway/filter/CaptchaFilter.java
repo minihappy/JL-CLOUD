@@ -49,14 +49,6 @@ public class CaptchaFilter implements GlobalFilter, Ordered {
 
     @Autowired
     RedisCache redisCache;
-//    @Bean
-//    public RouteLocator routes(RouteLocatorBuilder builder) {
-//        return builder.routes()
-//                .route("cache_request_body_route", r -> r.path("/downstream/**")
-//                        .filters(f -> f.prefixPath("/httpbin")
-//                                .cacheRequestBody(String.class).uri(uri))
-//                        .build();
-//    }
 
     private boolean isBlank(String s) {
         if (ObjectUtils.isEmpty(s) || StringUtils.hasText(" ")) {
@@ -65,33 +57,6 @@ public class CaptchaFilter implements GlobalFilter, Ordered {
             return false;
         }
     }
-
-    // 校验验证码逻辑
-    private void validate(ServerWebExchange exchange) {
-//        Map<String, String> stringStringMap = exchange.getRequest().getHeaders().toSingleValueMap();
-//        log.info("map:{}", stringStringMap);
-//
-//        //打印head
-//        Mono<MultiValueMap<String, String>> formData = exchange.getFormData();
-//        //获取form-data中的内容
-//        formData.subscribe(map -> {
-//            Map<String, String> formMap = map.toSingleValueMap();
-//            String code = formMap.get("code");
-//            String uid = formMap.get("token");
-//            log.info("formMap:{}", formMap);
-//            if ((isBlank(code) || isBlank(uid)) || !code.equals(redisCache.getCacheMapValue("captcha", uid))) {
-//                throw new CaptchaException("验证码不正确!");//授权凭证异常
-//            } else {
-//                redisCache.delCacheMapValue("captcha", uid);
-//            }
-//        });
-//        //如果是获取post或者get请求之类的body的话就从exchange.getRequest().getBody()中获取
-//        Map<String, String> queryParams = exchange.getRequest().getQueryParams().toSingleValueMap();
-//        log.info("queryParams:{}", queryParams);
-//        URI uri = exchange.getRequest().getURI();
-//        log.info("uri:{}", uri);
-    }
-
     private final List<HttpMessageReader<?>> messageReaders = getMessageReaders();
 
     private List<HttpMessageReader<?>> getMessageReaders() {
