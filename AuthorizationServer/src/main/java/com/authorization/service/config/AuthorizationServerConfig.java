@@ -178,7 +178,6 @@ public class AuthorizationServerConfig {
                     // for details
                     claims.claim("user_id", users.getId() + "");
                 }
-
                 // 用户权限
                 Set<String> authorities = principal.getAuthorities()
                         .stream()

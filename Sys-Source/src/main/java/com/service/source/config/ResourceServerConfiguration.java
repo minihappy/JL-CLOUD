@@ -1,7 +1,6 @@
 package com.service.source.config;
 
-import cloud.xuxiaowei.core.properties.CloudJwkKeyProperties;
-import org.springdoc.core.Constants;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
@@ -16,7 +15,7 @@ import org.springframework.security.web.util.matcher.RequestMatcher;
 
 import java.security.interfaces.RSAPublicKey;
 
-import static cloud.xuxiaowei.oauth2.impl.CsrfRequestMatcherImpl.CSRF_REQUEST_MATCHER_BEAN_NAME;
+
 
 /**
  * 资源服务配置
@@ -51,21 +50,6 @@ public class ResourceServerConfiguration {
 	@Autowired
 	public void setCloudJwkKeyProperties(CloudJwkKeyProperties cloudJwkKeyProperties) {
 		this.cloudJwkKeyProperties = cloudJwkKeyProperties;
-	}
-
-	@Autowired
-	@Qualifier(CSRF_REQUEST_MATCHER_BEAN_NAME)
-	public void setCsrfRequestMatcher(RequestMatcher csrfRequestMatcher) {
-		this.csrfRequestMatcher = csrfRequestMatcher;
-	}
-
-	@Bean
-	public WebSecurityCustomizer webSecurityCustomizer() {
-		return (web) -> {
-			web.ignoring().antMatchers("/favicon.ico");
-			web.ignoring().antMatchers(Constants.SWAGGER_UI_PREFIX + "/**");
-			web.ignoring().antMatchers(Constants.DEFAULT_API_DOCS_URL + "/**");
-		};
 	}
 
 	/**
